@@ -32,7 +32,7 @@ body {
 
 .logo {
     width: 20%;
-    height: 70%;
+    /* height: 70%; */
     margin-left: 30px;
     align-self: center;
 }
@@ -80,7 +80,7 @@ body {
 }
 
 /*inputs*/
-#msform input, #msform textarea {
+/* #msform input, #msform textarea {
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 0px;
@@ -90,7 +90,7 @@ body {
     font-family: montserrat;
     color: #2C3E50;
     font-size: 13px;
-}
+} */
 
 #msform input:focus, #msform textarea:focus {
     -moz-box-shadow: none !important;
