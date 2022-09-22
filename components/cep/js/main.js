@@ -1,21 +1,21 @@
 'use strict'
 
-const campo = document.getElementById("cep")
+const field = document.getElementById("zip")
 
-async function buscaCep() {
-    const cep = document.getElementById("cep").value
+async function zipSearch() {
+    const cep = document.getElementById("zip").value
 
     let url = `https://viacep.com.br/ws/${cep}/json/`
     try {
         const response = await fetch(url)
         const jsonResp = await response.json()
 
-        let campos = document.querySelectorAll("input").length
+        let fields = document.querySelectorAll("input").length
 
-        for (let i = 1; i < campos; i++) {
-            let campo = document.querySelectorAll("input")[i].id
+        for (let i = 1; i < fields; i++) {
+            let field = document.querySelectorAll("input")[i].id
 
-            document.getElementById(campo).value = jsonResp[campo]
+            document.getElementById(field).value = jsonResp[field]
                 // document.getElementById('bairro').value = jsonResp.bairro
                 // document.getElementById('logradouro').value = jsonResp.logradouro
                 // document.getElementById('localidade').value = jsonResp.localidade
@@ -24,7 +24,7 @@ async function buscaCep() {
         }
 
     } catch (e) {
-        console.log(`Deu erro ${e}`)
+        console.log(`Error ${e}`)
         console.log(response);
     }
 }
@@ -32,7 +32,7 @@ async function buscaCep() {
 
 // window.addEventListener("load", carrega)
 window.addEventListener("load", () => {
-    document.getElementById("cep").addEventListener("focusout", () => {
-        buscaCep()
+    document.getElementById("zip").addEventListener("focusout", () => {
+        zipSearch()
     })
 })
