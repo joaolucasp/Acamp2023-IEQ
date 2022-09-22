@@ -9,8 +9,12 @@
 
 html {
     height: 100%;
-    background: #6441A5; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #6441A5, #2a0845); /* Chrome 10-25, Safari 5.1-6 */
+    background: #2E6198; /* fallback for old browsers */
+    background-image: url(../images/background.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     overflow-x: hidden;
 }
 
@@ -18,6 +22,36 @@ body {
     font-family: montserrat, arial, verdana;
     background: transparent;
 }
+
+/*header*/
+.container {
+    margin: 0;
+    align-items: start;
+    margin-top: 10px;
+}
+
+.logo {
+    width: 20%;
+    height: 70%;
+    margin-left: 30px;
+    align-self: center;
+}
+
+.divider {
+    width: 35px;
+    height: 80px;
+}
+
+.name-content {
+    text-transform: uppercase;
+    color: white;
+    align-self: center;
+}
+
+.name-content h2 {
+    font-weight:bold;
+}
+/*------*/
 
 /*form styles*/
 #msform {
@@ -177,24 +211,66 @@ body {
     color: white;
 }
 
-
-/* Not relevant to this form */
-.dme_link {
-    margin-top: 30px;
-    text-align: center;
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+    .divider {
+        display: none;
+    }
+    .logo {
+        width: 70%;
+        height: 100%;
+        margin-left: 60px;
+    }
+    .name-content h2 {
+        display: none;
+        font-size: 1.5em;
+    }
 }
-.dme_link a {
-    background: #FFF;
-    font-weight: bold;
-    color: #ee0979;
-    border: 0 none;
-    border-radius: 25px;
-    cursor: pointer;
-    padding: 5px 25px;
-    font-size: 12px;
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .logo {
+        width: 40%;
+        height: 70%;
+    }
+
+    .name-content h2 {
+        font-size: 1.5em;
+    }
 }
 
-.dme_link a:hover, .dme_link a:focus {
-    background: #C5C5F1;
-    text-decoration: none;
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .logo {
+        width: 30%;
+        height: 70%;
+    }
+
+    .name-content h2 {
+        font-size: 2em;
+    }
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    .logo {
+        width: 25%;
+        height: 70%;
+    }
+
+    .name-content h2 {
+        font-size:2em;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { 
+    .logo {
+        width: 20%;
+        height: 70%;
+    }
+
+    .name-content h2 {
+        font-size: 2em;
+    }
 }
