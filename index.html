@@ -27,77 +27,102 @@
   <body>
    
     <!-- Main Navigation -->
-    <header>
-      <nav class="navbar navbar-expand-md navbar-light fixed-top navbar-transparent">
-          <div class="container">
-            <a href="index.html" class="navbar-brand">
-              <img src="images/spotify.svg" width="142" class="ml-3" alt="Logo Spotify">
-            </a>
+    <section class="container d-flex">
+      <div class="row">
+        <div class="col-lg-8 align-self-center">
+          <h1>
+            Acamp 2023
+          </h1>
+          <p>
+            O Acamp 2023 está beem mais próximo do que você imaginava não? E para completar, já chegou a hora de garantir sua inscrição!!
+          </p>
+          <a class="btn button d-none d-lg-block" href="subscription.html">QUERO ME INSCREVER!</a>
+        </div>
+        <div class="col-lg-4 align-self-center carrossel">
 
-            <button class="navbar-toggler mr-3" data-toggle="collapse" data-target="#nav-main">
-              <i class="fas fa-bars text-white"></i>
-            </button>
-
-            <div class="collapse navbar-collapse" id="nav-main">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                  <a href="https://www.spotify.com/br/premium/?utm_source=app&utm_medium=desktop&utm_campaign=upgrade" class="nav-link">Premium</a>
-                </li>
-                <li class="nav-item">
-                  <a href="https://support.spotify.com/br/" class="nav-link">Suporte</a>
-                </li>
-                <li class="nav-item">
-                  <a href="https://www.spotify.com/br/download/windows/" class="nav-link">Baixar</a>
-                </li>
-
-                <li class="nav-item divider">
-                </li>
-                <i class="fa-light fa-pipe divider"></i>
-
-                <li class="nav-item">
-                  <a href="https://www.spotify.com/br/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F" class="nav-link">Inscrever-se</a>
-                </li>
-                <li class="nav-item">
-                  <a href="https://accounts.spotify.com/pt-BR/login?continue=https%3A%2F%2Fopen.spotify.com%2F" class="nav-link">Entrar</a>
-                </li>
-              </ul>
+          <!-- Carousel 1 -->
+          <div id="mainSlider" class="carousel slide d-none d-lg-block" data-bs-ride="true">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#mainSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#mainSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#mainSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#mainSlider" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#mainSlider" data-bs-slide-to="4" aria-label="Slide 5"></button>
             </div>
-          </div>
-      </nav>
-    </header>
-
-    <!-- Main Content Section -->
-    <section id="home-content" class="d-flex">
-      <div class="container align-self-center">
-        <div class="row capa-content">
-          <div class="col-md-12">
-
-            <div id="carousel-spotify" class="carousel slide" data-ride="carousel">
-              <div class="carousel-inner">
-
-                <div class="carousel-item active">
-                  
-                </div>
-
-                <div class="carousel-item">
-                  
-                </div>
+            <div class="carousel-inner align-items-center" >
+              <div class="carousel-item active">
+                <img src="images/carousel-primary/image-1.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/carousel-primary/image-2.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/carousel-primary/image-3.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/carousel-primary/image-4.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/carousel-primary/image-5.png" class="d-block w-100" alt="...">
               </div>
             </div>
-
-            <!-- Controles -->
-            <a href="#carousel-spotify" class="carousel-control-prev" data-slide="prev">
-              <i class="fas fa-angle-left fa-3x"></i>
-            </a>
-
-            <a href="#carousel-spotify" class="carousel-control-next" data-slide="next">
-              <i class="fas fa-angle-right fa-3x"></i>
-            </a>
-
           </div>
+
+          <!-- Carousel 2 -->
+          <div id="secundarySlider" class="carousel slide d-block d-sm-block d-md-block d-lg-none" data-bs-ride="true">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#secundarySlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#secundarySlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#secundarySlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#secundarySlider" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#secundarySlider" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner align-items-center" >
+              <div class="carousel-item active">
+                <img src="images/carousel-secundary/image-1.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/carousel-secundary/image-1.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/carousel-secundary/image-1.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/carousel-secundary/image-1.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/carousel-secundary/image-1.png" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            
+          </div>
+          <a class="btn button d-block d-sm-block d-md-block d-lg-none" href="subscription.html">QUERO ME INSCREVER!</a>
         </div>
       </div>
     </section>
+
+    <footer class="fixed-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-6 box-footer" style="text-align: end;">
+            <img class="box-logo" src="images/logo.png" alt="Imagem logo regional de jovens região 513">
+            <img class="divider" src="images/components/pipe-teste.png" alt="">
+          </div>
+          <div class="col-6 box-footer" style="text-align: start;">
+            <!-- Region and Church Information -->
+            <div class="name-content d-flex flex-column">
+              <h5 style="margin-bottom: 0px;">
+                Quadrangular São Carlos
+              </h5>
+              <h5>
+                Região 513
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
 
     <!-- JavaScript (Opcional) -->
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
