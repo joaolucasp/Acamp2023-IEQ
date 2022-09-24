@@ -16,13 +16,14 @@ async function zipSearch() {
             //let field = document.querySelectorAll("input")[i].id
 
             //document.getElementById(field).value = jsonResp[field]
+            //}     
+            
+            //document.getElementById('number').value = ''
             document.getElementById('bairro').value = jsonResp.bairro
             document.getElementById('logradouro').value = jsonResp.logradouro
             document.getElementById('localidade').value = jsonResp.localidade
             document.getElementById('uf').value = jsonResp.uf
-        //}     
-            
-        //document.getElementById('number').value = ''
+            document.getElementById('number').focus()
     } catch (e) {
         console.log(`Error ${e}`)
         console.log(response);
@@ -32,7 +33,7 @@ async function zipSearch() {
 
 // window.addEventListener("load", carrega)
 window.addEventListener("load", () => {
-    document.getElementById("zip").addEventListener("change", () => {
+    document.getElementById("zip").addEventListener("keyup", () => {
         zipSearch()
     })
 })
