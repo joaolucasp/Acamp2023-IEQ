@@ -10,20 +10,19 @@ async function zipSearch() {
         const response = await fetch(url)
         const jsonResp = await response.json()
 
-        let fields = document.querySelectorAll("input").length
+        //let fields = document.querySelectorAll("input").length
 
-        for (let i = 1; i < fields; i++) {
-            let field = document.querySelectorAll("input")[i].id
+        //for (let i = 1; i < fields; i++) {
+            //let field = document.querySelectorAll("input")[i].id
 
-            document.getElementById(field).value = jsonResp[field]
-                // document.getElementById('bairro').value = jsonResp.bairro
-                // document.getElementById('logradouro').value = jsonResp.logradouro
-                // document.getElementById('localidade').value = jsonResp.localidade
-                // document.getElementById('uf').value = jsonResp.uf
-                
-            }
-            document.getElementById('number').value = ''
-
+            //document.getElementById(field).value = jsonResp[field]
+            document.getElementById('bairro').value = jsonResp.bairro
+            document.getElementById('logradouro').value = jsonResp.logradouro
+            document.getElementById('localidade').value = jsonResp.localidade
+            document.getElementById('uf').value = jsonResp.uf
+        //}     
+            
+        //document.getElementById('number').value = ''
     } catch (e) {
         console.log(`Error ${e}`)
         console.log(response);

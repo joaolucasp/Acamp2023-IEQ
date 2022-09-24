@@ -13,264 +13,238 @@ html {
     background-image: url(../images/background.png);
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     background-repeat: no-repeat;
     overflow-x: hidden;
 }
 
+/*HEADER*/
 body {
     font-family: montserrat, arial, verdana;
     background: transparent;
-}
-
-/*header*/
-.container {
-    margin: 0;
-    align-items: start;
-    margin-top: 10px;
+    overflow-x: hidden;
 }
 
 .logo {
-    width: 20%;
-    /* height: 70%; */
-    margin-left: 30px;
-    align-self: center;
+    width: 35%;
 }
 
 .divider {
-    width: 35px;
-    height: 80px;
-}
-
-.name-content {
-    text-transform: uppercase;
-    color: white;
-    align-self: center;
+    width: 20px;
+    height: 80%;
 }
 
 .name-content h2 {
-    font-weight:bold;
-}
-/*------*/
-
-/*form styles*/
-#msform {
-    text-align: center;
-    position: relative;
-    margin-top: 30px;
-}
-
-#msform fieldset {
-    background: white;
-    border: 0 none;
-    border-radius: 0px;
-    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
-    padding: 20px 30px;
-    box-sizing: border-box;
-    width: 80%;
-    margin: 0 10%;
-
-    /*stacking fieldsets above each other*/
-    position: relative;
-}
-
-/*Hide all except first fieldset*/
-#msform fieldset:not(:first-of-type) {
-    display: none;
-}
-
-/*inputs*/
-/* #msform input, #msform textarea {
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 0px;
-    margin-bottom: 10px;
-    width: 100%;
-    box-sizing: border-box;
-    font-family: montserrat;
-    color: #2C3E50;
-    font-size: 13px;
-} */
-
-#msform input:focus, #msform textarea:focus {
-    -moz-box-shadow: none !important;
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
-    border: 1px solid #ee0979;
-    outline-width: 0;
-    transition: All 0.5s ease-in;
-    -webkit-transition: All 0.5s ease-in;
-    -moz-transition: All 0.5s ease-in;
-    -o-transition: All 0.5s ease-in;
-}
-
-/*buttons*/
-#msform .action-button {
-    width: 100px;
-    background: #ee0979;
-    font-weight: bold;
-    color: white;
-    border: 0 none;
-    border-radius: 25px;
-    cursor: pointer;
-    padding: 10px 5px;
-    margin: 10px 5px;
-}
-
-#msform .action-button:hover, #msform .action-button:focus {
-    box-shadow: 0 0 0 2px white, 0 0 0 3px #ee0979;
-}
-
-#msform .action-button-previous {
-    width: 100px;
-    background: #C5C5F1 ;
-    font-weight: bold;
-    color: white;
-    border: 0 none;
-    border-radius: 25px;
-    cursor: pointer;
-    padding: 10px 5px;
-    margin: 10px 5px;
-}
-
-#msform .action-button-previous:hover, #msform .action-button-previous:focus {
-    box-shadow: 0 0 0 2px white, 0 0 0 3px #C5C5F1;
-}
-
-/*headings*/
-.fs-title {
-    font-size: 18px;
     text-transform: uppercase;
-    color: #2C3E50;
-    margin-bottom: 10px;
-    letter-spacing: 2px;
+    font-weight: bold;
+    color: white;
+    font-size: 1.4em;
+}
+/*-----*/
+
+/*Forms*/
+
+/*Tipography*/
+.box {
+    background-color: #D9D9D9;
+    width: 60%;
+    margin: 70px 20% 50px;
+    border-radius: 30px;
+    padding-bottom: 50px;
+}
+
+.title {
+    color: #2E6198;
     font-weight: bold;
 }
 
-.fs-subtitle {
-    font-weight: normal;
-    font-size: 13px;
-    color: #666;
-    margin-bottom: 20px;
+.title-secundary {
+    margin: 20px 0px 20px;
+    color: #1E1E1E;
+    font-size: 1.3em;
 }
 
-/*progressbar*/
-#progressbar {
-    margin-bottom: 30px;
-    overflow: hidden;
-    /*CSS counters to number the steps*/
-    counter-reset: step;
+.carousel-item p {
+    width: 75% !important;
+    margin: 30px 12.5% 10px;
+}
+/*------------*/
+
+
+/*Field's*/
+.field {
+    border-radius: 12px;
+    box-shadow: 2px 2px 30px 5px rgb(206, 206, 206) inset;
+    height: 45px;
 }
 
-#progressbar li {
-    list-style-type: none;
-    color: white;
-    text-transform: uppercase;
-    font-size: 9px;
-    width: 33.33%;
-    float: left;
-    position: relative;
-    letter-spacing: 1px;
+.field-single {
+    margin: 20px 12.5% 20px;
+    width: 75%;
 }
 
-#progressbar li:before {
-    content: counter(step);
-    counter-increment: step;
-    width: 24px;
-    height: 24px;
-    line-height: 26px;
-    display: block;
-    font-size: 12px;
-    color: #333;
-    background: white;
-    border-radius: 25px;
-    margin: 0 auto 10px auto;
+.field-dual {
+    width: 77%;
+    margin: 20px 11.5% 20px;
 }
-
-/*progressbar connectors*/
-#progressbar li:after {
-    content: '';
-    width: 100%;
-    height: 2px;
-    background: white;
-    position: absolute;
-    left: -50%;
-    top: 9px;
-    z-index: -1; /*put it behind the numbers*/
-}
-
-#progressbar li:first-child:after {
-    /*connector not needed before the first step*/
-    content: none;
-}
-
-/*marking active/completed steps green*/
-/*The number of the step and the connector before it = green*/
-#progressbar li.active:before, #progressbar li.active:after {
-    background: #ee0979;
+.btn-custom1 {
+    margin-left: 20px;
+    background-color: #2E6198;
     color: white;
 }
+
+.btn-custom1:hover {
+    background-color: white !important;
+    color: #2E6198 !important;
+    font-weight: bold;
+    border: 2px solid #2E6198 !important;
+}
+
+.btn-custom2 {
+    margin-left: 10px;
+    border: 2px solid #2E6198;
+    color: #2E6198;
+}
+/*----------*/
+
+.gif {
+    width: 100% !important;
+}
+
+.modal-body p{
+    margin: 10px 15px 10px !important;
+}
+/*-----*/
 
 /* Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) {
+    /*Header*/
+    .name-content {
+        display: none;
+    }
     .divider {
         display: none;
     }
-    .logo {
-        width: 70%;
-        height: 100%;
-        margin-left: 60px;
+    .logo{
+        width: 100%;
+        margin-left: 10%;
+        margin-right: 10%;
     }
-    .name-content h2 {
-        display: none;
-        font-size: 1.5em;
+    .header {
+        width: 80% !important;
     }
+    /*-----*/
+    /*Forms*/
+    .title {
+        font-size: 1.4em;
+    }
+
+    .title-secundary {
+        font-size: 1.3em;
+    }
+    .box{
+        width: 90%;
+        margin: 70px 5% 50px;
+    }
+    .field {
+        height: 50px;
+    }
+    .field-single {
+        margin: 20px 5% 20px;
+        width: 90%;
+    }
+    
+    .field-dual {
+        width: 95%;
+        margin: 20px 2% 20px;
+    }
+    figure img {
+        width: 80% !important;
+    }
+
+    #informacao-pagamento .title {
+        font-size: 1.2em;
+    }
+    /*-----*/
 }
 
 /* Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) and (max-width: 767.98px) { 
+    /*Header*/
+    .name-content h2 {
+        font-size: 1em;
+    } 
     .logo {
-        width: 40%;
+        width: 70%;
         height: 70%;
     }
-
-    .name-content h2 {
-        font-size: 1.5em;
+    /*-----*/
+    /*Forms*/
+    .title {
+        font-size: 1.3em;
     }
+
+    .title-secundary {
+        font-size: 1.2em;
+    }
+    .box{
+        width: 80%;
+        margin: 70px 10% 50px;
+    }
+    .field {
+        height: 50px;
+    }
+    .field-single {
+        margin: 20px 10% 20px;
+        width: 80%;
+    }
+    
+    .field-dual {
+        width: 85%;
+        margin: 20px 7.5% 20px;
+    }
+    figure img {
+        width: 80% !important;
+    }
+    /*-----*/
 }
 
 /* Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) and (max-width: 991.98px) { 
+    /*------*/
+    .name-content h2 {
+        font-size: 1em;
+    } 
     .logo {
-        width: 30%;
+        width: 70%;
         height: 70%;
     }
-
-    .name-content h2 {
-        font-size: 2em;
+    /*-----*/
+    /*Forms*/
+    figure img {
+        width: 70% !important;
     }
+    /*-----*/
 }
 
 /* Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) and (max-width: 1199.98px) { 
-    .logo {
-        width: 25%;
-        height: 70%;
-    }
-
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    /*Header*/
     .name-content h2 {
-        font-size:2em;
+        font-size: 1.2em;
+    } 
+    .logo {
+        width: 50%;
     }
+    /*------*/
+    /*Forms*/
+
+    figure img {
+        width: 80% !important;
+    }
+    /*-----*/
 }
 
 /* Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) { 
-    .logo {
-        width: 20%;
-        height: 70%;
-    }
-
-    .name-content h2 {
-        font-size: 2em;
-    }
+    
 }

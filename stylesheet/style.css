@@ -58,6 +58,9 @@ section p {
     width: 80%;
 }
 
+#secundarySlider img {
+    border-radius: 20px;
+}
 /*------------------*/
 
 /*Typography*/
@@ -110,7 +113,7 @@ footer {
 /* Extra small devices (portrait phones, less than 576px)*/
 @media (max-height: 730px) {
     section h1 {
-        font-size: 1.4em !important;
+        font-size: 2em !important;
     }
     section p {
         font-size: 1em;
@@ -121,6 +124,7 @@ footer {
     /*Content*/
     section {
         text-align: center;
+        padding-top: 80px;
     }
     section h1 {
         font-size: 3em;
@@ -135,7 +139,7 @@ footer {
 
     #secundarySlider{
         width: 90%;
-        margin: 0px 5% 10px 5%;
+        margin: 0px 5% 10px 5% !important;
         display: none;
     }
 
