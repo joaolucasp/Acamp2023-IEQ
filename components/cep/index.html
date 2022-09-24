@@ -6,25 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Busca CEP</title>
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/main.js"></script>
 </head>
 
 <body>
-    <div class="container">
+    <div class="container mt-lg-4">
         <form>
             <div class="form-floating mb-3">
-                <label for="zip">CEP</label>
                 <input inputmode="numeric" 
-                       class="form-control" 
-                       id="zip" 
-                       required 
-                       maxlength="8" 
-                       onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                class="form-control" 
+                name="zip" 
+                id="zip" 
+                required 
+                maxlength="8" 
+                onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                <label for="zip">CEP</label>
             </div>
             <div class="form-floating mb-3">
-                <label for="logradouro">Rua</label>
                 <input type="text" class="form-control" id="logradouro">
+                <label for="logradouro">Rua</label>
             </div>
             <div class="form-floating mb-3">
                 <label for="number">Numero</label>
