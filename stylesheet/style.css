@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 /*basic reset*/
-* {
+*, a {
     margin: 0;
     padding: 0;
 }
@@ -26,18 +26,19 @@ body {
 
 /*Home Content*/
 section {
-    height: 90% !important;
+    height: 93% !important;
     color: white;
 }
 
-section h1 {
+.title {
     text-transform: uppercase;
     font-weight: bold;
     font-size: 5em;
     text-shadow: 0px 0px 60px #13d9c8;
+    letter-spacing: 3px;
 }
 
-section p {
+.description{
     margin: 30px 0px 40px;
     font-size: 1.2em;
     font-weight: lighter;
@@ -50,22 +51,32 @@ section p {
     border-radius: 20px;
     box-shadow: 0px 0px 60px #13d9c8;
     width: 40%;
+    height: 3em;
+    line-height: 2em;
 }
 
-#mainSlider{
-    margin-left: 70px;
-    margin-right: 10px;
-    width: 80%;
-}
-
-#secundarySlider img {
-    border-radius: 20px;
+.button:hover {
+    border: 1.5px solid white !important;
 }
 /*------------------*/
 
-/*Typography*/
+/*Carousel*/
+#mainSlider {
+    width: 85%;
+    margin: 0 7.5% 0px;
+    border-radius: 50px;
+    box-shadow: 20px 20px 80px #13d9c9b3;
+}
 
-/*-----------*/
+#secundarySlider {
+    border-radius: 50px;
+    box-shadow: 15px 15px 80px #13d9c9b3;
+}
+
+.carousel-item img {
+    border-radius: 50px;
+}
+/*------------------*/
 
 /*Footer*/
 footer {
@@ -73,19 +84,20 @@ footer {
     border-top-right-radius: 65px;
     background-color: #D9D9D9;
     box-shadow:0px -4px 48px #13d9c8;
+    height: 7% !important;
+    
 }
 
 .box-footer {
     padding-right: 0px;
     padding-left: 0px;
-    align-self: center;
-    margin: 10px 0px 10px;
+    align-self: center !important;
+    text-transform: uppercase;
+    color: #2E6198;
 }
 
 .box-logo {
     background-color: #2E6198;
-    /*width: 170px;
-    height: 45px;*/
     width: 25%;
     padding: 5px 10px 5px;
     border-radius: 30px;
@@ -94,70 +106,66 @@ footer {
 .divider {
     width: 15px;
     height: 50px;
-    margin: 0px 5px 0px;
 }
 
-.name-content {
-    text-transform: uppercase;
-    color: #2E6198;
-    align-self: center;
-}
-
-.name-content h5 {
-    margin: 0;
+.box-footer h5 {
     font-weight: bold;
     font-size: 1.1em;
+    margin-bottom: 0px !important;
 }
 /*------*/
 
-/* Extra small devices (portrait phones, less than 576px)*/
-@media (max-height: 730px) {
-    section h1 {
-        font-size: 2em !important;
-    }
-    section p {
-        font-size: 1em;
+/*Devices with X-small height*/
+@media (max-height: 670px) and (max-width: 991px){
+    footer {
+        display: none;
     }
 }
 
+/*Devices with small height*/
+@media (max-height: 730px) and (max-width: 991px) {
+    .title {
+        font-size: 2em !important;
+    }
+    .description {
+        font-size: 1em !important;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) { 
     /*Content*/
     section {
         text-align: center;
         padding-top: 80px;
     }
-    section h1 {
+    .title {
         font-size: 3em;
     }
-    section p {
+    .description {
         font-size: 1.2em;
-    }
-
-    .carrossel {
-        width: 100%;
     }
 
     #secundarySlider{
         width: 90%;
         margin: 0px 5% 10px 5% !important;
-        display: none;
+        box-shadow: 0px 0px 20px #13d9c97e;
     }
 
     .button {
-        width: 70%;
-        margin: 30px 15% 0px;
+        width: 60%;
+        height: 2.5em;
+        margin: 30px 20% 0px;   
+        line-height: normal;
     }
     /*------*/
 
     /*Footer*/
-    .name-content h5 {
+    .box-footer h5 {
         font-size: 0.7em;
     }
     .box-logo {
         width: 50%;
-    }
-    .box-footer {
-        margin: 5px 0px 5px;
     }
     .divider {
         height: 35px;
@@ -171,16 +179,14 @@ footer {
     section {
         text-align: center;
     }
-    section h1 {
+    .title {
         font-size: 3.2em;
-    }
-    .carrossel {
-        width: 100%;
     }
 
     #secundarySlider{
         width: 90%;
         margin: 0px 5% 10px 5%;
+        box-shadow: 0px 0px 30px #13d9c97e;
     }
 
     .button {
@@ -190,18 +196,15 @@ footer {
     /*------*/
 
     /*Footer*/
-    .name-content h5 {
+    .box-footer h5 {
         font-size: 0.9em;
     }
     .box-logo {
         width: 50%;
     }
-   .box-footer {
-        margin: 5px 0px 5px;
-   }
-   .divider {
-        height: 40px;
-   }
+    .divider {
+            height: 40px;
+    }
    /*------*/
 }
 
@@ -211,23 +214,21 @@ footer {
     section {
         text-align: center;
     }
-    section h1 {
+    .title {
         font-size: 3.5em;
-    }
-    .carrossel {
-        width: 100%;
     }
 
     #secundarySlider{
         width: 80%;
-        margin: 0px 10% 10px 10%;
+        margin: 0px 10% 0px 10%;
+        box-shadow: 0px 0px 50px #13d9c9bf;
     }
-
     .button {
         width: 50%;
-        margin: 30px 25% 0px; 
+        margin: 30px 25% 0px;
+        font-size: large;
     }
-    /*------*/
+    /*--------*/
 
     /*Footer*/
     .box-logo {
@@ -238,7 +239,9 @@ footer {
 
 /* Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) and (max-width: 1199.98px) { 
-    
+    .title {
+        font-size: 4em;
+    }
 }
 
 /* Extra large devices (large desktops, 1200px and up)*/
