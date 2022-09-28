@@ -106,8 +106,13 @@ body {
 }
 /*----------*/
 
+/*Extras*/
 .gif {
     width: 100% !important;
+}
+
+.gif img {
+    border-radius: 10px;
 }
 
 .modal-body p{
@@ -161,7 +166,7 @@ body {
         width: 80% !important;
     }
 
-    #informacao-pagamento .title {
+    #paymentInformation .title {
         font-size: 1.2em;
     }
     /*-----*/

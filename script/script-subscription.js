@@ -1,12 +1,84 @@
 /*Funções que fazem verificações (não validações) de campos vazios*/ 
+const carousel_form = document.querySelector('#carouselForms');
+const carousel = bootstrap.Carousel.getOrCreateInstance(carousel_form);
 
-function checkFields() {
-   /*Essa função deve ser responsável por checar os campos antes de avançar para a proxima etapa (ou quando clicar no botao de avançar*/ 
+function checkFields(control, position) {
+    /*Essa função deve ser responsável por checar os campos antes de avançar para a proxima etapa (ou quando clicar no botao de avançar*/ 
+   
+    const section_active = "#" + carousel._getActive().id;
+    const class_fields_section_active = getFieldsActiveSection(section_active);
+    var fields_section_active = document.querySelectorAll(class_fields_section_active, section_active);
+    var filled_fields = true;
+
+    //Assign validations
+    for(let i = 0; i < fields_section_active.length; i++){
+        if(fields_section_active[i].value == '' && fields_section_active[i].hasAttribute('required')){
+            enableIsInvalid(fields_section_active[i].id)
+            filled_fields = false;
+        } else if(fields_section_active[i].value != '' && fields_section_active[i].hasAttribute('required')) {
+            enableIsValid(fields_section_active[i].id)
+        }
+    }
+
+    //Checks if all fields are filled
+    if(filled_fields && control == "next"){
+        carousel.next();
+    }
+    if(control == "prev"){
+        carousel.prev();
+    }
 }
 
+function getFieldsActiveSection (section){
+    switch (section) {
+        case "#section-1":
+            return ".field-section-1"
+        case "#section-2":
+            return ".field-section-2"
+        case "#section-3":
+            return ".field-section-3"
+        case "#section-4":
+            return ".field-section-4"
+        case "#section-5":
+            return ".field-section-5"
+    }
+}
 
-function removeInvalid(id) {
-    /*Essa função deve ser responsável por remover a classe INVALID quando o usuário alterar o valor do campo*/
+function enableIsValid(id) {
+    //First check if you don't have the invalid class applied to the field
+    if(document.getElementById(id).classList.contains('is-invalid')){
+        document.getElementById(id).classList.remove('is-invalid')
+    }
+    //Activate the "is-valid" class
+    if(!(document.getElementById(id).classList.contains('is-valid'))){
+        document.getElementById(id).classList.add('is-valid')
+    }
+}
+
+function enableIsInvalid(id) {
+    //First check if you don't have the valid class applied to the field
+    if(document.getElementById(id).classList.contains('is-valid')){
+        document.getElementById(id).classList.remove('is-valid')
+    }
+    //Activate the "is-invalid" class
+    if(!(document.getElementById(id).classList.contains('is-invalid'))){
+        document.getElementById(id).classList.add('is-invalid')
+    }
+}
+
+function removeInvalid(){
+    const section_active = "#" + carousel._getActive().id;
+    const fields_section_active = getFieldsActiveSection(section_active);
+    var fields = document.querySelectorAll(fields_section_active, section_active);
+
+    //Assign validations
+    for(let i = 0; i < fields.length; i++){
+        if(fields[i].value != '' ){
+            if(fields[i].classList.contains('is-invalid')){
+                fields[i].classList.remove('is-invalid')
+            }
+        } 
+    }
 }
 /*-----------------------------------------------------------------------*/
 
@@ -50,12 +122,12 @@ function disableRequired(id) {
 
 
 /*Funções responsáveis pela exibicação de alguns itens baseado na idade*/
-var birthDateElement = document.getElementById('data-nascimento');
-var dataToday = new Date();
+var birth_date_element = document.getElementById('data-nascimento');
+var data_today = new Date();
 
-birthDateElement.onchange = function () {
-    var birthDate = new Date(String(birthDateElement.value));
-    var age = calculateAge(birthDate, dataToday);
+birth_date_element.onchange = function () {
+    var birth_date = new Date(String(birth_date_element.value));
+    var age = calculateAge(birth_date, data_today);
 
     if(age >= 18) {
         disableComponent('nome-responsavel');
