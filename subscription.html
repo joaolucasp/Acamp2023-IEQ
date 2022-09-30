@@ -50,8 +50,7 @@
     </div>
    </div>
 
-
-   <div class="row">
+  <div class="row">
     <div class="col-md-12">
       <form action="index.html">
         <div id="carouselForms" class="carousel slide" data-bs-ride="false" data-bs-wrap="false" data-bs-interval="false" data-bs-touch="true">
@@ -61,12 +60,11 @@
             <button type="button" data-bs-target="#carouselForms" data-bs-slide-to="2" aria-label="Slide 3"></button>
             <button type="button" data-bs-target="#carouselForms" data-bs-slide-to="3" aria-label="Slide 4"></button>
             <button type="button" data-bs-target="#carouselForms" data-bs-slide-to="4" aria-label="Slide 5"></button>
-            <button type="button" data-bs-target="#carouselForms" data-bs-slide-to="5" aria-label="Slide 6"></button>
           </div>
           <div class="carousel-inner box text-center">
             <!-- First Section Forms -->
             <div class="carousel-item active" onchange="removeInvalid(id)" id="section-1">
-              <h3 class="mt-4 mb-4 title">Precisamos saber um pouco mais sobre você</h3>
+              <h3 class="mt-4 mb-4 title">Precisamos saber mais sobre você</h3>
 
               <input required='' name="nome" id="nome"
               class="form-control field field-single field-section-1"
@@ -109,8 +107,103 @@
 
             <!-- Second Section Forms -->
             <div class="carousel-item" onchange="removeInvalid(id)" id="section-2">
+              <h3 class="mt-4 mb-4 title">Informe seus documentos</h3>
+
+              <input required='' id="rg"
+              class="form-control field field-single field-section-2"
+              inputmode="numeric" minlength="8" maxlength="10"
+              onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+              placeholder="RG (apenas números)">
+
+              <input required='' id="cpf"
+              class="form-control field field-single field-section-2"
+              inputmode="numeric" minlength="11" maxlength="11" 
+              onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+              placeholder="CPF (apenas números)">
+
+              <input name="nome-responsavel" id="nome-responsavel"
+              class="form-control field field-single field-section-2 d-none" 
+              inputmode="text" minlength="2"
+              onkeypress="return (event.charCode >= 65 && event.charCode <= 126) || (event.charCode >= 192 && event.charCode <= 251)"
+              type="text" placeholder="Nome completo do responsável">
+
+              <input id="rg-responsavel"
+              class="form-control field field-single field-section-2 d-none"
+              inputmode="numeric" minlength="8" maxlength="10" 
+              onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+              placeholder="RG do responsável (apenas números)">
+
+            </div>
+
+            <!-- Third Section Forms -->
+            <div class="carousel-item" onchange="removeInvalid(id)" id="section-3">
+              <h3 class="mt-4 mb-4 title">Agora precisamos de algumas informações de contato</h3>
+              
+              <input required='' name="numero-telefone" id="numero-telefone"
+              class="form-control field field-single field-section-3"
+              inputmode="numeric" maxlength="11" minlength="8" 
+              onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+              type="tel" placeholder="Celular (12) 34569-0123">
+              
+              <input required='' name="email" id="email"
+              class="form-control field field-single field-section-3" 
+              type="email" placeholder="Email">
+              
+              <input required='' id="zip"
+              class="form-control field field-single field-section-3" 
+              inputmode="numeric" maxlength="8" 
+              onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+              placeholder="CEP (apenas números)">
+
+              <div class="row field-dual">
+                <div class="col-9">
+
+                  <input required='' name="logradouro" id="logradouro"
+                  class="form-control field field-section-3"
+                  inputmode="text" minlength="2"
+                  type="text" placeholder="Rua">
+
+                </div>
+                <div class="col-3">
+
+                  <input required='' name="number" id="number"
+                  class="form-control field field-section-3"
+                  inputmode="numeric" maxlength="5" 
+                  onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                  placeholder="Número">
+
+                </div>
+              </div>
+
+              <div class="row field-dual">
+                <div class="col-md-4">
+
+                  <input required='' name="bairro" id="bairro"
+                  class="form-control field field-section-3"
+                  inputmode="text" minlength="2"
+                  type="text" placeholder="Bairro">
+
+                </div>
+                <div class="col-md-4">
+
+                  <input required='' name="localidade" id="localidade"
+                  class="form-control field field-section-3"
+                  inputmode="text" minlength="2"
+                  type="text" placeholder="Cidade">
+
+                </div>
+                <div class="col-md-4">
+
+                  <input required='' name="uf" id="uf"
+                  class="form-control field field-section-3"
+                  inputmode="text" minlength="2"
+                  type="text"  placeholder="Estado">
+
+                </div>
+              </div>
+
               <h3 class="mt-4 mb-4 title">Em qual bairro fica sua igreja?</h3>
-              <select required="" class="form-control field field-single field-section-2" name="igreja" id="igreja">
+              <select required="" class="form-control field field-single field-section-3" name="igreja" id="igreja">
                 <option value="" disabled="" selected>Opções para escolha</option>
                 <option value="sem-igreja">Não frequento</option>
                 <option value="ieq-aguavermelha">IEQ - Água Vermelha</option>
@@ -132,149 +225,71 @@
               </select>
               
               <input name="outra-igreja" id="outra-igreja"
-              class="form-control field field-single field-section-2 d-none"
+              class="form-control field field-single field-section-3 d-none"
+              inputmode="text" minlength="2"
+              onkeypress="return (event.charCode >= 65 && event.charCode <= 126) || (event.charCode >= 192 && event.charCode <= 251)"
               type="text" placeholder="Insira o nome da sua igreja">
-              <p>
-                Caso você não saiba em qual destas a sua igreja de encaixa, pergunte para o seu líder de jovens algum amigo que frequenta sua igreja há mais tempo!
-              </p>
-
-              <h3 class="mt-4 mb-4 title">Falta pouco, não desista!!</h3>
-              <figure class="gif">
-                <img src="images/gif/gif-1.gif" alt="">
-              </figure>
-            </div>
-
-            <!-- Third Section Forms -->
-            <div class="carousel-item" onchange="removeInvalid(id)" id="section-3">
-              <h3 class="mt-4 mb-4 title">Agora precisamos de algumas informações de contato, ok?</h3>
               
-              <input required='' name="numero-telefone" id="numero-telefone"
-              class="form-control field field-single field-section-3"
-              inputmode="numeric" maxlength="11" minlength="8" 
-              onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-              placeholder="Celular (12) 34569-0123">
-              
-              <input required='' name="email" id="email"
-              class="form-control field field-single field-section-3" 
-              type="email" placeholder="Email">
-              
-              <input required='' id="zip"
-              class="form-control field field-single field-section-3" 
-              inputmode="numeric" maxlength="8" 
-              onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-              placeholder="CEP (apenas números)">
-
-              <div class="row field-dual">
-                <div class="col-9">
-
-                  <input required='' name="logradouro" id="logradouro"
-                  class="form-control field field-section-3"
-                  type="text" placeholder="Rua">
-
-                </div>
-                <div class="col-3">
-
-                  <input required='' name="number" id="number"
-                  class="form-control field field-section-3"
-                  inputmode="numeric" maxlength="5" 
-                  onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-                  placeholder="Número">
-
-                </div>
-              </div>
-
-              <div class="row field-dual">
-                <div class="col-md-4">
-
-                  <input required='' name="bairro" id="bairro"
-                  class="form-control field field-section-3"
-                  type="text" placeholder="Bairro">
-
-                </div>
-                <div class="col-md-4">
-
-                  <input required='' name="localidade" id="localidade"
-                  class="form-control field field-section-3"
-                  type="text" placeholder="Cidade">
-
-                </div>
-                <div class="col-md-4">
-
-                  <input required='' name="uf" id="uf"
-                  class="form-control field field-section-3" 
-                  type="text"  placeholder="Estado">
-
-                </div>
-              </div>
             </div>
 
             <!-- Forth Section Forms -->
             <div class="carousel-item" onchange="removeInvalid(id)" id="section-4">
-              <h3 class="mt-4 mb-4 title">Precisamos de só mais alguns detalhes!!</h3>
 
-              <input required='' id="rg"
-              class="form-control field field-single field-section-4"
-              inputmode="numeric" minlength="7" maxlength="9" 
-              onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-              placeholder="RG (apenas números)">
+              <h3 class="title mt-4 mb-4">Você possui alguma alergia ou restrição alimentar?</h3>
 
-              <input required='' id="cpf"
-              class="form-control field field-single field-section-4"
-              inputmode="numeric" minlength="10" maxlength="11" 
-              onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-              placeholder="CPF (apenas números)">
-
-              <input name="nome-responsavel" id="nome-responsavel"
-              class="form-control field field-single field-section-4 d-none" 
-              type="text" placeholder="Nome completo do responsável">
-
-              <input id="rg-responsavel"
-              class="form-control field field-single field-section-4 d-none"
-              inputmode="numeric" minlength="7" maxlength="9" 
-              onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-              placeholder="RG do responsável (apenas números)">
-            </div>
-
-             <!-- Fifth Section Forms -->
-            <div class="carousel-item" onchange="removeInvalid(id)" id="section-5">
-              <h3 class="title mt-4 mb-4">Você tem alguma alergia ou precisa levar algum remédio de uso constante?</h3>
-
+              <!-- Options (Yes/No)-->
               <div class="d-inline">
+
                 <button type="button"
                 class="btn btn-custom1"
-                onclick="enableComponent('alergias'); enableComponent('remedios'); enableRequired('alergias'); enableRequired('remedios');">Sim</button>
+                onclick="enableComponent('alergias'); enableRequired('alergias');">Sim</button>
 
                 <button type="button"
                 class="btn btn-custom2"
-                onclick="disableComponent('alergias'); disableComponent('remedios'); disableRequired('alergias'); disableRequired('remedios');"
-                data-bs-target="#carouselForms" data-bs-slide="next">Não</button>
-
-                <input name="alergias" id="alergias"
-                class="form-control field field-single field-section-5 d-none"
-                type="text" placeholder="Alergias">
-
-                <input name="remedios" id="remedios"
-                class="form-control field field-single field-section-5 d-none"
-                type="text" placeholder="Remédios (qual(is) e a quantidade diária)">
+                onclick="disableComponent('alergias');disableRequired('alergias');">Não</button>
 
               </div>
-             </div>
 
-              <!-- Sixth Section Forms -->
-             <div class="carousel-item" onchange="removeInvalid(id)" id="section-6">
-              <div id="carousel-item-6">
-                <h3 class="title mt-4 mb-4">Já temos todos os seus dados!</h3>
+              <input name="alergias" id="alergias"
+              class="form-control field field-single field-section-4 d-none"
+              inputmode="text" minlength="2"
+              type="text" placeholder="Alergias">
 
-                <h5 class="title mt-4 mb-4">Mas fique atento, para prosseguir você precisa concordar com as regras de funcionamento do nosso Acampamento.</h5>
+              <h3 class="title mt-4 mb-4">Realiza o uso contínuo de alguma medicação?</h3>
 
-                <figure class="gif">
-                  <img src="images/gif/gif-3.gif" alt="">
-                </figure>
+              <!-- Options (Yes/No)-->
+              <div class="d-inline">
+
+                <button type="button"
+                class="btn btn-custom1"
+                onclick="enableComponent('remedios'); enableRequired('remedios');">Sim</button>
+
+                <button type="button"
+                class="btn btn-custom2"
+                onclick="disableComponent('remedios');disableRequired('remedios');">Não</button>
+
               </div>
+              
+              <input name="remedios" id="remedios"
+              class="form-control field field-single field-section-4 d-none"
+              inputmode="text" minlength="2"
+              type="text" placeholder="Remédios (qual(is) e a quantidade diária)">
+
+            </div>
+
+             <!-- Fifth Section Forms -->
+            <div class="carousel-item" id="section-5">
+              <h3 class="title mt-4 mb-4">Já temos todos os seus dados!</h3>
+
+              <h3 class="title mt-4 mb-4" style="font-size: 1.1em;">Mas fique atento, para prosseguir você precisa concordar com as regras de funcionamento do nosso Acampamento.</h3>
+
+              <figure class="gif">
+                <img src="images/gif/gif-3.gif" alt="">
+              </figure>
               
               <!-- Button trigger modal -->
               <button type="button"
-              class="btn btn-custom1 mt-4"
+              class="btn btn-custom1 mt-2"
               data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 Ler todas as regras
               </button>
@@ -425,37 +440,56 @@
                     <div class="modal-footer">
                       <span>Você concorda com todas as regras pré-estabelecidas acima?</span>
                       <button type="button" class="btn btn-custom2" data-bs-dismiss="modal">Não</button>
-                      <button type="submit" onclick="enableComponent('paymentInformation'); disableComponent('carousel-item-6')" class="btn btn-custom1" data-bs-dismiss="modal">Sim</button>
+                      <button type="button" class="btn btn-custom1" data-bs-dismiss="modal" onclick="enableComponent('registrationConfirmation')">Sim</button>
                     </div>
                   </div>
                 </div>
               </div>
-              
+
+              <div id="registrationConfirmation" class="d-none">
+                <h3 class="title mt-4 mb-2">Deseja confirmar sua inscrição?</h3>
+
+                <button type="submit"
+                class="btn btn-custom1 bg-success"
+                data-bs-slide="next" data-bs-target="#carouselForms"
+                onclick="enableComponent('paymentInformation')">Sim</button>
+
+              </div>
+
+            </div>
+
+            <!-- Sixth Section Forms -->
+            <div class="carousel-item" id="section-6">
+
               <!-- Information Payment -->
               <div id="paymentInformation" class="d-none">
-                <h5 class="title mt-4 mb-4">
-                  Parábens, já temos todos os seus dados! 
-                </h5>
+                <h3 class="title mt-4 mb-2">
+                  Parábens, sua inscrição foi registrada! 
+                </h3>
+
+                <div id="section-6-description">
+                  <h3 class="title mt-3 mb-4" style="font-size: 1em;">
+                    Sua inscrição será garantida apenas mediante ao pagamento! Deseja gerar o link de pagamento agora?
+                  </h3>
   
-                <h5 class="title mt-4 mb-4">
-                  Sua inscrição será garantida apenas mediante ao pagamento! Deseja gerar o link de pagamento agora?
-                </h5>
-    
-                <button type="button" class="btn btn-custom2">Não</button>
-                <button type="button" class="btn btn-custom1" onclick="enableComponent('link-pagamento')">Sim</button>
+                  <button type="button" class="btn btn-custom2">Não</button>
+                  <button type="button" class="btn btn-custom1" onclick="enableComponent('linkPayment'); disableComponent('section-6-description')">Sim</button>
 
-                <br>
-              </div>
+                </div>
 
-              <div id="link-pagamento" class="d-none">
-                <a href="" class="btn btn-custom1 bg-success mt-3">Link para pagamento</a>
-                <figure class="gif mt-3">
-                  <img src="images/gif/gif-2.gif" alt="">
-                </figure>
+                <div id="linkPayment" class="d-none mt-2">
+                  <a href="" class="btn btn-custom1 bg-success">Link para pagamento</a>
+                  <figure class="gif mt-3">
+                    <img src="images/gif/gif-2.gif" alt="">
+                  </figure>
+                </div>
               </div>
+        
             </div>
 
           </div>
+        
+        <!-- Carousel Controls-->
         </div>
           <button class="carousel-control-prev" type="button" onclick="checkFields('prev')">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -468,14 +502,8 @@
         </div>
       </form>
     </div>
-   </div>
+  </div>
    
-
-  <!-- JavaScript (Opcional) -->
-  <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
-  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script> -->
   <script src="script/script-subscription.js"></script>
   </body>
 </html>

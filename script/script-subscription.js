@@ -39,8 +39,8 @@ function getFieldsActiveSection (section){
             return ".field-section-3"
         case "#section-4":
             return ".field-section-4"
-        case "#section-5":
-            return ".field-section-5"
+        default:
+            return "not-found"
     }
 }
 
