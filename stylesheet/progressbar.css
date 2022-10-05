@@ -1,0 +1,167 @@
+/*General Formatting*/
+.form-stepper a {
+    cursor: default;
+    text-decoration: none;
+}
+/*-----------------*/
+
+/*Form Stepper Formatting*/
+.form-stepper-horizontal {
+    width: 60%;
+    margin: 50px auto 50px;
+    padding: 0 2% 0;
+}
+/*-----------------*/
+
+/*Item Form-stepper*/
+.form-stepper-list:last-child {
+    list-style: none;
+    margin-left: 3%;
+}
+.form-stepper-list:not(:last-child) {
+    display: flex;
+    flex: 1;
+}
+.form-stepper-list:not(:last-child) a{
+    width: 50%;
+}
+.form-stepper-list:not(:last-child):after {
+    position: relative;
+    flex: 1;
+    top: 20%;
+    height: 1px;
+    content: "";
+}
+.form-stepper-list:after {
+    background-color: #dee2e6;
+}
+.form-stepper-list.form-stepper-completed:after {
+    background-color: #13D9C8;
+}
+.form-stepper-list:last-child a{
+    list-style: none;
+}
+/*-----------------*/
+
+/*Circle Formatting*/
+ul.form-stepper .form-stepper-circle span {
+    line-height: 2.5em;
+}
+ul.form-stepper li a .form-stepper-circle {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+/*-----------------*/
+
+/*Form Stepper Active*/
+.form-stepper .form-stepper-active .form-stepper-circle {
+    background-color: #13D9C8 !important;
+    color: #fff;
+    box-shadow: 0px 0px 4px 0px #13D9C8;
+    width: 50px;
+    height: 50px;
+    margin-top: -5px;
+    line-height: -10px;
+    font-size: 1.5em;
+}
+.form-stepper-active .form-stepper-circle span{
+    line-height: 2.2em !important;
+}
+
+.form-stepper .form-stepper-active .label {
+    color: #ffffff !important;
+    text-decoration: none;
+}
+.form-stepper .form-stepper-active .form-stepper-circle:hover {
+    background-color: #13D9C8 !important;
+    box-shadow: 0px 0px 4px 0px #13D9C8;
+    color: #fff !important;
+}
+.form-stepper .form-stepper-active span.text-muted {
+    color: #fff !important;
+}
+/*-----------------*/
+
+
+/*Form Stepper Unfinished*/
+.form-stepper .form-stepper-unfinished .form-stepper-circle {
+    background-color: #D9D9D9;
+}
+/*-----------------------*/
+
+
+/*Form Stepper Completed*/
+.form-stepper .form-stepper-completed .form-stepper-circle {
+    background-color: #13D9C8 !important;
+    box-shadow: 0px 0px 4px 0px #13D9C8;
+    color: #fff;
+}
+.form-stepper .form-stepper-completed .label {
+    color: #0e9594 !important;
+}
+.form-stepper .form-stepper-completed .form-stepper-circle:hover {
+    background-color: #0e9594 !important;
+    color: #fff !important;
+}
+.form-stepper .form-stepper-completed span.text-muted {
+    color: #fff !important;
+}
+/*-----------------------*/
+
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+    .form-stepper {
+        width: 90%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .form-stepper-list:not(:last-child):after {
+        top: 50%;
+    }
+    ul.form-stepper li a .form-stepper-circle {
+        width: 25px;
+        height: 25px;
+    }
+    .form-stepper .form-stepper-active .form-stepper-circle {
+        width: 35px;
+        height: 35px;
+        margin-top: -5px;
+        font-size: 1.1em; 
+    }
+    ul.form-stepper .form-stepper-circle span {
+        line-height: 1em;
+    }
+    .form-stepper-active .form-stepper-circle span{
+        line-height: 1.9em !important;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .form-stepper {
+        width: 80%;
+    }
+    .form-stepper-list:not(:last-child):after {
+        top: 50%;
+    }
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) { 
+   .form-stepper-list:not(:last-child):after {
+        top: 50%;
+    }
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+   
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { 
+    
+}

@@ -1,9 +1,60 @@
-/*Funções que fazem verificações (não validações) de campos vazios*/ 
+
+/*Events that enable or disable form buttons and change progress bar*/ 
 const carousel_form = document.querySelector('#carouselForms');
 const carousel = bootstrap.Carousel.getOrCreateInstance(carousel_form);
 
-function checkFields(control, position) {
-    /*Essa função deve ser responsável por checar os campos antes de avançar para a proxima etapa (ou quando clicar no botao de avançar*/ 
+carousel_form.addEventListener('slid.bs.carousel', event => {
+    if (event.to == 0) {
+        disableComponent('carousel-control-prev');
+    } else if(event.to == 1){
+        enableComponent('carousel-control-prev');
+    } else if(event.to == 4){
+        disableComponent('carousel-control-next');
+    } else {
+        enableComponent('carousel-control-prev');
+        enableComponent('carousel-control-next');
+    }
+
+    changeProgressBar();
+})
+
+function changeProgressBar(){
+    document.querySelectorAll(".form-stepper-list").forEach((formStepHeader) => {
+        formStepHeader.classList.add("form-stepper-unfinished");
+        formStepHeader.classList.remove("form-stepper-active", "form-stepper-completed");
+    });
+    const formStepCircle = document.querySelector('li[step="' + event.to + '"]');
+
+
+    formStepCircle.classList.remove("form-stepper-unfinished", "form-stepper-completed");
+    formStepCircle.classList.add("form-stepper-active");
+
+    for (let index = 0; index < event.to; index++) {
+        /**
+         * Select the form step circle (progress bar).
+         */
+        const formStepCircle = document.querySelector('li[step="' + index + '"]');
+        /**
+         * Check if the element exist. If yes, then proceed.
+         */
+        if (formStepCircle) {
+            /**
+             * Mark the form step as completed.
+             */
+            formStepCircle.classList.remove("form-stepper-unfinished", "form-stepper-active");
+            formStepCircle.classList.add("form-stepper-completed");
+        }
+    }
+}
+/*-----------------------------------------------------------------------*/
+
+
+/*This method is responsible for checking and validating the filling of the fields*/ 
+function checkFields(control) {
+    if(control == "prev"){
+        carousel.prev();
+        return;
+    }
    
     const section_active = "#" + carousel._getActive().id;
     const class_fields_section_active = getFieldsActiveSection(section_active);
@@ -12,10 +63,14 @@ function checkFields(control, position) {
 
     //Assign validations
     for(let i = 0; i < fields_section_active.length; i++){
-        if(fields_section_active[i].value == '' && fields_section_active[i].hasAttribute('required')){
+        var required_field = Boolean(fields_section_active[i].hasAttribute('required'));
+
+        if(!validateFieldSize(fields_section_active[i]) && required_field){
             enableIsInvalid(fields_section_active[i].id)
+            fields_section_active[i].classList.add('shake')
             filled_fields = false;
-        } else if(fields_section_active[i].value != '' && fields_section_active[i].hasAttribute('required')) {
+            
+        } else if(validateFieldSize(fields_section_active[i]) && required_field) {
             enableIsValid(fields_section_active[i].id)
         }
     }
@@ -23,10 +78,7 @@ function checkFields(control, position) {
     //Checks if all fields are filled
     if(filled_fields && control == "next"){
         carousel.next();
-    }
-    if(control == "prev"){
-        carousel.prev();
-    }
+    }  
 }
 
 function getFieldsActiveSection (section){
@@ -44,6 +96,24 @@ function getFieldsActiveSection (section){
     }
 }
 
+function validateFieldSize(field){
+    var field_inputmode = field.getAttribute('inputmode')
+    var field_length = field.value.length;
+    var minimum_field_length = field.getAttribute('minlength');
+    var maximum_field_length = field.getAttribute('maxlength');
+
+    if(field_inputmode == 'text') {
+        return Boolean(field_length >= minimum_field_length)
+    } else if(field_inputmode == 'numeric') {
+        return Boolean(field_length >= minimum_field_length && field_length <= maximum_field_length)
+    } else if(field_inputmode == 'date' || field_inputmode == 'select' || field_inputmode == 'email') {
+        return Boolean(field.value != '')
+    }
+}
+/*-----------------------------------------------------------------------*/
+
+
+/*Methods responsible for adding or removing validation classes to fields*/
 function enableIsValid(id) {
     //First check if you don't have the invalid class applied to the field
     if(document.getElementById(id).classList.contains('is-invalid')){
@@ -82,17 +152,21 @@ function removeInvalid(){
 }
 /*-----------------------------------------------------------------------*/
 
-/*Funções responsáveis por exibir um componente baseado em uma informação*/
+/*Method responsible for enabling the 'outra-igreja' field*/
 document.getElementById('igreja').onchange = function(){
     if(igreja.value == 'outra-igreja') {
         enableComponent('outra-igreja')
+        enableComponent('label-outra-igreja')
         enableRequired('outra-igreja')
     } else {
         disableComponent('outra-igreja')
+        disableComponent('label-outra-igreja')
         disableRequired('outra-igreja')
     }
 };
+/*-----------------------------------------------------------------------*/
 
+/*Methods responsible for enabling or disabling HTML elements*/
 function disableComponent(id) {
     if(!(document.getElementById(id).classList.contains('d-none'))){  
         document.getElementById(id).classList.add('d-none');
@@ -104,9 +178,9 @@ function enableComponent(id) {
         document.getElementById(id).classList.remove('d-none');
     }
 }
-/*-----------------------------------------------------------------------*/
+/*-----------------------------------------------------------*/
 
-/*Funções responsáveis por atribuir o atributo de required à elementos especificos*/
+/*Methods responsible for adding the 'required' attribute to HTML elements*/
 function enableRequired(id) {
     if(!document.getElementById(id).hasAttribute('required')){
         document.getElementById(id).setAttribute('required','')
@@ -121,23 +195,27 @@ function disableRequired(id) {
 /*---------------------------------------------------------------------------------*/
 
 
-/*Funções responsáveis pela exibicação de alguns itens baseado na idade*/
+/*Method called based on participant's date of birth*/
 var birth_date_element = document.getElementById('data-nascimento');
-var data_today = new Date();
+var today_date = new Date();
 
 birth_date_element.onchange = function () {
     var birth_date = new Date(String(birth_date_element.value));
-    var age = calculateAge(birth_date, data_today);
+    var age = calculateAge(birth_date, today_date);
 
     if(age >= 18) {
         disableComponent('nome-responsavel');
+        disableComponent('label-nome-responsavel')
         disableComponent('rg-responsavel')
+        disableComponent('label-rg-responsavel')
 
         disableRequired('nome-responsavel');
         disableRequired('rg-responsavel');
     } else {
         enableComponent('nome-responsavel');
-        enableComponent('rg-responsavel') 
+        enableComponent('label-nome-responsavel')
+        enableComponent('rg-responsavel')
+        enableComponent('label-rg-responsavel')
 
         enableRequired('nome-responsavel');
         enableRequired('rg-responsavel');

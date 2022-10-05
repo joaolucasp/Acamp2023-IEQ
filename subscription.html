@@ -11,6 +11,7 @@
 
     <!-- Style CSS -->
     <link rel="stylesheet" href="stylesheet/style-subscription.css" type="text/css">
+    <link rel="stylesheet" href="stylesheet/progressbar.css" type="text/css">
 
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/eac825cd8d.js" crossorigin="anonymous"></script>
@@ -31,7 +32,7 @@
   <body>
 
     <!-- Header -->
-   <div class="container">
+  <div class="container">
     <div class="row">
       <div class="col-md-12 d-flex header w-50 mt-4">
         <img class="img-fluid logo mt-1 align-self-center" src="images/logo.png" alt="Imagem logo regional de jovens região 513">
@@ -48,90 +49,165 @@
         </div>
       </div>
     </div>
-   </div>
+  </div>
 
+  <!-- Form Steps / Progress Bar -->
+  <ul class="form-stepper form-stepper-horizontal text-center d-flex justify-content-between">
+    <!-- Step 1 -->
+    <li class="form-stepper-active form-stepper-list" step="0">
+      <a>
+        <span class="form-stepper-circle">
+          <span>1</span>
+        </span>
+        <div class="label mt-2 d-none d-lg-block">Dados Pessoais</div>
+      </a>
+    </li>
+
+    <!-- Step 2 -->
+    <li class="form-stepper-unfinished form-stepper-list" step="1">
+      <a>
+        <span class="form-stepper-circle text-muted">
+          <span>2</span>
+        </span>
+        <div class="label text-muted mt-2 d-none d-lg-block">Documentos</div>
+      </a>
+    </li>
+
+    <!-- Step 3 -->
+    <li class="form-stepper-unfinished form-stepper-list" step="2">
+      <a>
+        <span class="form-stepper-circle text-muted">
+          <span>3</span>
+        </span>
+        <div class="label text-muted mt-2 d-none d-lg-block">Contato</div>
+      </a>
+    </li>
+
+    <!-- Step 4 -->
+    <li class="form-stepper-unfinished form-stepper-list" step="3">
+      <a>
+        <span class="form-stepper-circle text-muted">
+          <span>4</span>
+        </span>
+        <div class="label text-muted mt-2 d-none d-lg-block">Medicamentos</div>
+      </a>
+     
+    </li>
+  </ul>
+
+  <!-- Carousel Forms -->
   <div class="row">
     <div class="col-md-12">
       <form action="index.html">
-        <div id="carouselForms" class="carousel slide" data-bs-ride="false" data-bs-wrap="false" data-bs-interval="false" data-bs-touch="true">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselForms" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselForms" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselForms" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#carouselForms" data-bs-slide-to="3" aria-label="Slide 4"></button>
-            <button type="button" data-bs-target="#carouselForms" data-bs-slide-to="4" aria-label="Slide 5"></button>
-          </div>
+        <div id="carouselForms" class="carousel slide" data-bs-ride="false" data-bs-wrap="false" data-bs-interval="false" data-bs-touch="true">     
+
+          <!-- Carousel Contents -->
           <div class="carousel-inner box text-center">
             <!-- First Section Forms -->
             <div class="carousel-item active" onchange="removeInvalid(id)" id="section-1">
               <h3 class="mt-4 mb-4 title">Precisamos saber mais sobre você</h3>
 
-              <input required='' name="nome" id="nome"
-              class="form-control field field-single field-section-1"
-              inputmode="text" minlength="2"
-              onkeypress="return (event.charCode >= 65 && event.charCode <= 126) || (event.charCode >= 192 && event.charCode <= 251)"
-              type="text" placeholder="Nome">
+              <fieldset class="w-75 fieldset">
 
-              <input required='' name="sobrenome" id="sobrenome"
-              class="form-control field field-single field-section-1"
-              inputmode="text" minlength="2"
-              onkeypress="return (event.charCode >= 65 && event.charCode <= 126) || (event.charCode >= 192 && event.charCode <= 251)"
-              type="text" placeholder="Sobrenome">
+                <div class="form-floating">
+                  <input required='' name="nome" id="nome"
+                  class="form-control field field-section-1"
+                  inputmode="text" minlength="2"
+                  onkeypress="return (event.charCode >= 65 && event.charCode <= 126) || (event.charCode >= 192 && event.charCode <= 251)"
+                  type="text" placeholder="Nome">
+                  <label for="nome">Nome</label>
+                </div>
+                
+                <div class="form-floating">
+                  <input required='' name="sobrenome" id="sobrenome"
+                  class="form-control field field-section-1"
+                  inputmode="text" minlength="2"
+                  onkeypress="return (event.charCode >= 65 && event.charCode <= 126) || (event.charCode >= 192 && event.charCode <= 251)"
+                  type="text" placeholder="Sobrenome">
+                  <label for="sobrenome">Sobrenome</label>
+                </div>
+                
+                <div class="form-floating">
+                  <input required='' name="apelido" id="apelido"
+                  class="form-control field field-section-1"
+                  inputmode="text" minlength="2"
+                  onkeypress="return (event.charCode >= 65 && event.charCode <= 126) || (event.charCode >= 192 && event.charCode <= 251)"
+                  type="text" placeholder="Apelido">
+                  <label for="apelido">Apelido</label>
+                </div>
 
-              <input required='' name="apelido" id="apelido"
-              class="form-control field field-single field-section-1"
-              inputmode="text" minlength="2"
-              onkeypress="return (event.charCode >= 65 && event.charCode <= 126) || (event.charCode >= 192 && event.charCode <= 251)"
-              type="text" placeholder="Apelido">
+                <div class="form-floating">
+                  <input required='' name="data-nascimento" id="data-nascimento"
+                  class="form-control field field-section-1" 
+                  inputmode="date"
+                  type="date">
+                  <label for="data-nascimento">Data de nascimento</label>
+                </div>
 
-              <input required='' name="data-nascimento" id="data-nascimento"
-              class="form-control field field-single field-section-1" 
-              type="date">
+              </fieldset>
 
               <h4 class="d-inline title-secundary">Possui irmão acompanhante?</h4>
               <div class="d-inline">
                 <button type="button" id="sim-acompanhante" class="btn btn-custom1"
-                onclick="enableComponent('nome-acompanhante'); disableComponent(id); enableRequired('nome-acompanhante');" >Sim</button>
+                onclick="enableComponent('nome-acompanhante'); disableComponent(id); enableRequired('nome-acompanhante'); enableComponent('label-acompanhante');" >Sim</button>
 
                 <button type="button" id="nao-acompanhante" class="btn btn-custom2"
-                onclick="disableComponent('nome-acompanhante'); enableComponent('sim-acompanhante'); disableRequired('nome-acompanhante'); checkFields();">Não</button>
+                onclick="disableComponent('nome-acompanhante'); enableComponent('sim-acompanhante'); disableRequired('nome-acompanhante'); disableComponent('label-acompanhante'); checkFields('next');">Não</button>
               </div>
 
-              <input name="nome-acompanhante" id="nome-acompanhante"
-              class="form-control field field-single field-section-1 d-none"
-              inputmode="text" minlength="2"
-              onkeypress="return (event.charCode >= 65 && event.charCode <= 126) || (event.charCode >= 192 && event.charCode <= 251)"
-              type="text" placeholder="Qual o nome completo do seu irmão?">
+              <fieldset class="w-75 fieldset">
+                <div class="form-floating">
+                  <input name="nome-acompanhante" id="nome-acompanhante"
+                  class="form-control field field-section-1 d-none"
+                  inputmode="text" minlength="2"
+                  onkeypress="return (event.charCode >= 65 && event.charCode <= 126) || (event.charCode >= 192 && event.charCode <= 251)"
+                  type="text" placeholder="Qual o nome completo do seu irmão?">
+                  <label id="label-acompanhante" for="nome-acompanhante" class="d-none">Nome do irmão acompanhante</label>
+                </div>
+              </fieldset>           
               
             </div>
 
             <!-- Second Section Forms -->
             <div class="carousel-item" onchange="removeInvalid(id)" id="section-2">
               <h3 class="mt-4 mb-4 title">Informe seus documentos</h3>
+              <fieldset class="w-75 fieldset">
+                <div class="form-floating">
+                  <input required='' id="rg"
+                  class="form-control field field-section-2"
+                  inputmode="numeric" minlength="8" maxlength="10"
+                  onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                  placeholder="RG (apenas números)">
+                  <label for="rg">RG (apenas números)</label>
+                </div>
 
-              <input required='' id="rg"
-              class="form-control field field-single field-section-2"
-              inputmode="numeric" minlength="8" maxlength="10"
-              onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-              placeholder="RG (apenas números)">
+                <div class="form-floating">
+                  <input required='' id="cpf"
+                  class="form-control field field-section-2"
+                  inputmode="numeric" minlength="11" maxlength="11" 
+                  onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                  placeholder="CPF (apenas números)">
+                  <label for="cpf">CPF (apenas números)</label>
+                </div>
 
-              <input required='' id="cpf"
-              class="form-control field field-single field-section-2"
-              inputmode="numeric" minlength="11" maxlength="11" 
-              onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-              placeholder="CPF (apenas números)">
+                <div class="form-floating">
+                  <input name="nome-responsavel" id="nome-responsavel"
+                  class="form-control field field-section-2 d-none" 
+                  inputmode="text" minlength="2"
+                  onkeypress="return (event.charCode >= 65 && event.charCode <= 126) || (event.charCode >= 192 && event.charCode <= 251)"
+                  type="text" placeholder="Nome completo do responsável">
+                  <label id="label-nome-responsavel" for="nome-responsavel" class="d-none">Nome do responsável</label>
+                </div>
 
-              <input name="nome-responsavel" id="nome-responsavel"
-              class="form-control field field-single field-section-2 d-none" 
-              inputmode="text" minlength="2"
-              onkeypress="return (event.charCode >= 65 && event.charCode <= 126) || (event.charCode >= 192 && event.charCode <= 251)"
-              type="text" placeholder="Nome completo do responsável">
-
-              <input id="rg-responsavel"
-              class="form-control field field-single field-section-2 d-none"
-              inputmode="numeric" minlength="8" maxlength="10" 
-              onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-              placeholder="RG do responsável (apenas números)">
+                <div class="form-floating">
+                  <input id="rg-responsavel"
+                  class="form-control field field-section-2 d-none"
+                  inputmode="numeric" minlength="8" maxlength="10" 
+                  onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                  placeholder="RG do responsável (apenas números)">
+                  <label id="label-rg-responsavel" for="rg-responsavel" class="d-none">RG do responsável (apenas números)</label>
+                </div>
+              </fieldset>
 
             </div>
 
@@ -139,141 +215,275 @@
             <div class="carousel-item" onchange="removeInvalid(id)" id="section-3">
               <h3 class="mt-4 mb-4 title">Agora precisamos de algumas informações de contato</h3>
               
-              <input required='' name="numero-telefone" id="numero-telefone"
-              class="form-control field field-single field-section-3"
-              inputmode="numeric" maxlength="11" minlength="8" 
-              onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-              type="tel" placeholder="Celular (12) 34569-0123">
-              
-              <input required='' name="email" id="email"
-              class="form-control field field-single field-section-3" 
-              type="email" placeholder="Email">
-              
-              <input required='' id="zip"
-              class="form-control field field-single field-section-3" 
-              inputmode="numeric" maxlength="8" 
-              onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-              placeholder="CEP (apenas números)">
+              <fieldset class="w-75 fieldset">
+               <div class="row" style="margin-top: -20px; margin-bottom: -20px;">
+                  <div class="col-4">
+                    <div class="form-floating">
+                      <select required="" inputmode="select" class="form-control field field-section-3" name="ddd" id="ddd">
+                        <option value="" disabled selected class="text-center">(+XX)</option>
+                        <option value="11">+11</option>
+                        <option value="12">+12</option>
+                        <option value="13">+13</option>
+                        <option value="14">+14</option>
+                        <option value="15">+15</option>
+                        <option value="16">+16</option>
+                        <option value="17">+17</option>
+                        <option value="18">+18</option>
+                        <option value="19">+19</option>
+                        <option value="20">+20</option>
+                        <option value="21">+21</option>
+                        <option value="22">+22</option>
+                        <option value="23">+23</option>
+                        <option value="24">+24</option>
+                        <option value="25">+25</option>
+                        <option value="26">+26</option>
+                        <option value="27">+27</option>
+                        <option value="28">+28</option>
+                        <option value="29">+29</option>
+                        <option value="30">+30</option>
+                        <option value="31">+31</option>
+                        <option value="32">+32</option>
+                        <option value="33">+33</option>
+                        <option value="34">+34</option>
+                        <option value="35">+35</option>
+                        <option value="36">+36</option>
+                        <option value="37">+37</option>
+                        <option value="38">+38</option>
+                        <option value="39">+39</option>
+                        <option value="40">+40</option>
+                        <option value="41">+41</option>
+                        <option value="42">+42</option>
+                        <option value="43">+43</option>
+                        <option value="44">+44</option>
+                        <option value="45">+45</option>
+                        <option value="46">+46</option>
+                        <option value="47">+47</option>
+                        <option value="48">+48</option>
+                        <option value="49">+49</option>
+                        <option value="50">+50</option>
+                        <option value="51">+51</option>
+                        <option value="52">+52</option>
+                        <option value="53">+53</option>
+                        <option value="54">+54</option>
+                        <option value="55">+55</option>
+                        <option value="56">+56</option>
+                        <option value="57">+57</option>
+                        <option value="58">+58</option>
+                        <option value="59">+59</option>
+                        <option value="60">+60</option>
+                        <option value="61">+61</option>
+                        <option value="62">+62</option>
+                        <option value="63">+63</option>
+                        <option value="64">+64</option>
+                        <option value="65">+65</option>
+                        <option value="66">+66</option>
+                        <option value="67">+67</option>
+                        <option value="68">+68</option>
+                        <option value="69">+69</option>
+                        <option value="70">+70</option>
+                        <option value="71">+71</option>
+                        <option value="72">+72</option>
+                        <option value="73">+73</option>
+                        <option value="74">+74</option>
+                        <option value="75">+75</option>
+                        <option value="76">+76</option>
+                        <option value="77">+77</option>
+                        <option value="78">+78</option>
+                        <option value="79">+79</option>
+                        <option value="80">+80</option>
+                        <option value="81">+81</option>
+                        <option value="82">+82</option>
+                        <option value="83">+83</option>
+                        <option value="84">+84</option>
+                        <option value="85">+85</option>
+                        <option value="86">+86</option>
+                        <option value="87">+87</option>
+                        <option value="88">+88</option>
+                        <option value="89">+89</option>
+                        <option value="90">+90</option>
+                        <option value="91">+91</option>
+                        <option value="92">+92</option>
+                        <option value="93">+93</option>
+                        <option value="94">+94</option>
+                        <option value="95">+95</option>
+                        <option value="96">+96</option>
+                        <option value="97">+97</option>
+                        <option value="98">+98</option>
+                        <option value="99">+99</option>
+                        <option value="100">+100</option>
+                      </select>
+                      <label for="ddd">DDD</label>
+                    </div>
+                  </div>
+                  <div class="col-8">
+                    <div class="form-floating">
+                      <input required='' name="numero-telefone" id="numero-telefone"
+                      class="form-control field field-section-3"
+                      inputmode="numeric" maxlength="11" minlength="8" 
+                      onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                      type="tel" placeholder="Celular (12) 34569-0123">
+                      <label for="numero-telefone">Número de telefone (01) 23456-7890</label>
+                    </div>
+                  </div>
+               </div>
 
-              <div class="row field-dual">
-                <div class="col-9">
-
-                  <input required='' name="logradouro" id="logradouro"
-                  class="form-control field field-section-3"
-                  inputmode="text" minlength="2"
-                  type="text" placeholder="Rua">
-
+                <div class="form-floating">
+                  <input required='' name="email" id="email"
+                  class="form-control field field-section-3" 
+                  inputmode="email" type="email" placeholder="Email">
+                  <label for="email">E-mail</label>
                 </div>
-                <div class="col-3">
-
-                  <input required='' name="number" id="number"
-                  class="form-control field field-section-3"
-                  inputmode="numeric" maxlength="5" 
+                
+                <div class="form-floating">
+                  <input required='' id="zip"
+                  class="form-control field field-section-3" 
+                  inputmode="numeric" minlength="2" maxlength="8" 
                   onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-                  placeholder="Número">
+                  placeholder="CEP (apenas números)">
+                  <label for="zip">CEP (apenas números)</label>
+                </div>     
+  
+                <div class="row" style="margin-top: -20px; margin-bottom: -20px;">
+                  <div class="col-9">
+                    <div class="form-floating">
+                      <input required='' name="logradouro" id="logradouro"
+                      class="form-control field field-section-3"
+                      inputmode="text" minlength="2"
+                      type="text" placeholder="Rua">
+                      <label for="logradouro">Rua</label>
+                    </div>
+                  </div>
+
+                  <div class="col-3">
+                    <div class="form-floating">
+                      <input required='' name="number" id="number"
+                      class="form-control field field-section-3"
+                      inputmode="numeric" minlength="1" maxlength="5" 
+                      onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                      placeholder="Número">
+                      <label for="number">Número</label>
+                    </div>
+                  </div>
 
                 </div>
-              </div>
 
-              <div class="row field-dual">
-                <div class="col-md-4">
+                <div class="row" style="margin-top: -20px; margin-bottom: -20px;">
+                  <div class="col-md-4">
+                    <div class="form-floating">
+                      <input required='' name="bairro" id="bairro"
+                      class="form-control field field-section-3"
+                      inputmode="text" minlength="2"
+                      type="text" placeholder="Bairro">
+                      <label for="bairro">Bairro</label>
+                    </div>
+                  </div>
 
-                  <input required='' name="bairro" id="bairro"
-                  class="form-control field field-section-3"
-                  inputmode="text" minlength="2"
-                  type="text" placeholder="Bairro">
-
+                  <div class="col-md-4">
+                    <div class="form-floating">
+                      <input required='' name="localidade" id="localidade"
+                      class="form-control field field-section-3"
+                      inputmode="text" minlength="2"
+                      type="text" placeholder="Cidade">
+                      <label for="localidade">Cidade</label>
+                    </div>
+                  </div>
+  
+                  <div class="col-md-4">
+                    <div class="form-floating">
+                      <input required='' name="uf" id="uf"
+                      class="form-control field field-section-3"
+                      inputmode="text" minlength="2"
+                      type="text"  placeholder="Estado">
+                      <label for="uf">Estado</label>
+                    </div>
+                  </div>
+                 
                 </div>
-                <div class="col-md-4">
-
-                  <input required='' name="localidade" id="localidade"
-                  class="form-control field field-section-3"
-                  inputmode="text" minlength="2"
-                  type="text" placeholder="Cidade">
-
-                </div>
-                <div class="col-md-4">
-
-                  <input required='' name="uf" id="uf"
-                  class="form-control field field-section-3"
-                  inputmode="text" minlength="2"
-                  type="text"  placeholder="Estado">
-
-                </div>
-              </div>
+              </fieldset> 
 
               <h3 class="mt-4 mb-4 title">Em qual bairro fica sua igreja?</h3>
-              <select required="" class="form-control field field-single field-section-3" name="igreja" id="igreja">
-                <option value="" disabled="" selected>Opções para escolha</option>
-                <option value="sem-igreja">Não frequento</option>
-                <option value="ieq-aguavermelha">IEQ - Água Vermelha</option>
-                <option value="ieq-azulville">IEQ - Azulville</option>
-                <option value="ieq-boavista">IEQ - Boa Vista</option>
-                <option value="ieq-botafogo">IEQ - Botafogo</option>
-                <option value="ieq-descalvado">IEQ - Descalvado</option>
-                <option value="ieq-ibate">IEQ - Ibaté</option>
-                <option value="ieq-itirapina">IEQ - Itirapina</option>
-                <option value="ieq-tangara">IEQ - Jardim Tangará</option>
-                <option value="ieq-jockeyclub">IEQ - Jockey Club</option>
-                <option value="ieq-montecarlo">IEQ - Monte Carlo</option>
-                <option value="ieq-planaltoparaiso">IEQ - Planalto Paraiso</option>
-                <option value="ieq-ribeiraobonito">IEQ - Ribeirão Bonito</option>
-                <option value="ieq-santafelicia">IEQ - Santa Felícia</option>
-                <option value="ieq-vilabrasilia">IEQ - Vila Brasília</option>
-                <option value="outra-igreja">Outra</option>
+
+              <fieldset class="w-75 fieldset">
+                <select required="" inputmode="select" class="form-control field field-section-3" name="igreja" id="igreja">
+                  <option value="" disabled="" selected>Opções para escolha</option>
+                  <option value="sem-igreja">Não frequento</option>
+                  <option value="ieq-aguavermelha">IEQ - Água Vermelha</option>
+                  <option value="ieq-azulville">IEQ - Azulville</option>
+                  <option value="ieq-boavista">IEQ - Boa Vista</option>
+                  <option value="ieq-botafogo">IEQ - Botafogo</option>
+                  <option value="ieq-descalvado">IEQ - Descalvado</option>
+                  <option value="ieq-ibate">IEQ - Ibaté</option>
+                  <option value="ieq-itirapina">IEQ - Itirapina</option>
+                  <option value="ieq-tangara">IEQ - Jardim Tangará</option>
+                  <option value="ieq-jockeyclub">IEQ - Jockey Club</option>
+                  <option value="ieq-montecarlo">IEQ - Monte Carlo</option>
+                  <option value="ieq-planaltoparaiso">IEQ - Planalto Paraiso</option>
+                  <option value="ieq-ribeiraobonito">IEQ - Ribeirão Bonito</option>
+                  <option value="ieq-santafelicia">IEQ - Santa Felícia</option>
+                  <option value="ieq-vilabrasilia">IEQ - Vila Brasília</option>
+                  <option value="outra-igreja">Outra</option>
+                </select>
                 
-              </select>
-              
-              <input name="outra-igreja" id="outra-igreja"
-              class="form-control field field-single field-section-3 d-none"
-              inputmode="text" minlength="2"
-              onkeypress="return (event.charCode >= 65 && event.charCode <= 126) || (event.charCode >= 192 && event.charCode <= 251)"
-              type="text" placeholder="Insira o nome da sua igreja">
-              
+                <div class="form-floating">
+                  <input name="outra-igreja" id="outra-igreja"
+                  class="form-control field field-section-3 d-none"
+                  inputmode="text" minlength="2"
+                  onkeypress="return (event.charCode >= 65 && event.charCode <= 126) || (event.charCode >= 192 && event.charCode <= 251)"
+                  type="text" placeholder="Insira o nome da sua igreja">
+                  <label id="label-outra-igreja" for="outra-igreja" class="d-none">Insira o nome da sua igreja</label>
+                </div>
+
+              </fieldset>
+  
             </div>
 
             <!-- Forth Section Forms -->
             <div class="carousel-item" onchange="removeInvalid(id)" id="section-4">
-
               <h3 class="title mt-4 mb-4">Você possui alguma alergia ou restrição alimentar?</h3>
 
               <!-- Options (Yes/No)-->
               <div class="d-inline">
-
                 <button type="button"
                 class="btn btn-custom1"
-                onclick="enableComponent('alergias'); enableRequired('alergias');">Sim</button>
+                onclick="enableComponent('alergias'); enableComponent('label-alergias');enableRequired('alergias');">Sim</button>
 
                 <button type="button"
                 class="btn btn-custom2"
-                onclick="disableComponent('alergias');disableRequired('alergias');">Não</button>
-
+                onclick="disableComponent('alergias'); disableComponent('label-alergias');disableRequired('alergias');">Não</button>
               </div>
 
-              <input name="alergias" id="alergias"
-              class="form-control field field-single field-section-4 d-none"
-              inputmode="text" minlength="2"
-              type="text" placeholder="Alergias">
+              <fieldset class="w-75 fieldset">
+                <div class="form-floating">
+                  <input name="alergias" id="alergias"
+                  class="form-control field field-single field-section-4 d-none"
+                  inputmode="text" minlength="2"
+                  type="text" placeholder="Alergias">
+                  <label id="label-alergias" for="alergias" class="d-none">Alergias</label>
+                </div>
+              </fieldset>
 
               <h3 class="title mt-4 mb-4">Realiza o uso contínuo de alguma medicação?</h3>
 
               <!-- Options (Yes/No)-->
               <div class="d-inline">
-
                 <button type="button"
                 class="btn btn-custom1"
-                onclick="enableComponent('remedios'); enableRequired('remedios');">Sim</button>
+                onclick="enableComponent('remedios'); enableComponent('label-remedios'); enableRequired('remedios');">Sim</button>
 
                 <button type="button"
                 class="btn btn-custom2"
-                onclick="disableComponent('remedios');disableRequired('remedios');">Não</button>
-
+                onclick="disableComponent('remedios'); disableComponent('label-remedios');disableRequired('remedios'); checkFields('next')">Não</button>
               </div>
               
-              <input name="remedios" id="remedios"
-              class="form-control field field-single field-section-4 d-none"
-              inputmode="text" minlength="2"
-              type="text" placeholder="Remédios (qual(is) e a quantidade diária)">
+              <fieldset class="w-75 fieldset mb-3">
+                <div class="form-floating">
+                  <input name="remedios" id="remedios"
+                  class="form-control field field-single field-section-4 d-none"
+                  inputmode="text" minlength="2"
+                  type="text" placeholder="Remédios (qual(is) e a quantidade diária)">
+                  <label id="label-remedios" for="remedios" class="d-none">Remédios (qual(is) e a quantidade diária)</label>
+                </div>
+              </fieldset>
 
             </div>
 
@@ -488,22 +698,21 @@
             </div>
 
           </div>
-        
-        <!-- Carousel Controls-->
+
+          <!--Carousel Controls-->
+          <div class="text-center mb-3">
+            <button id="carousel-control-prev" class="btn btn-secondary d-none" type="button" onclick="checkFields('prev')" style="margin-right: 15px;">Anterior</button>
+            
+            <button id="carousel-control-next" class="btn btn-success" type="button" onclick="checkFields('next')">Próximo</button>
+          </div>
+
         </div>
-          <button class="carousel-control-prev" type="button" onclick="checkFields('prev')">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" onclick="checkFields('next')">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
+
       </form>
     </div>
   </div>
    
   <script src="script/script-subscription.js"></script>
+  <script src="script/progressbar.js"></script>
   </body>
 </html>
