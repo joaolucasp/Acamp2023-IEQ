@@ -15,21 +15,21 @@ carousel_form.addEventListener('slid.bs.carousel', event => {
         enableComponent('carousel-control-next');
     }
 
-    changeProgressBar();
+    if(event.to != 4) changeProgressBar(event.to);
 })
 
-function changeProgressBar(){
+function changeProgressBar(size){
     document.querySelectorAll(".form-stepper-list").forEach((formStepHeader) => {
         formStepHeader.classList.add("form-stepper-unfinished");
         formStepHeader.classList.remove("form-stepper-active", "form-stepper-completed");
     });
-    const formStepCircle = document.querySelector('li[step="' + event.to + '"]');
+    const formStepCircle = document.querySelector('li[step="' + size + '"]');
 
 
     formStepCircle.classList.remove("form-stepper-unfinished", "form-stepper-completed");
     formStepCircle.classList.add("form-stepper-active");
 
-    for (let index = 0; index < event.to; index++) {
+    for (let index = 0; index < size; index++) {
         /**
          * Select the form step circle (progress bar).
          */
@@ -152,19 +152,6 @@ function removeInvalid(){
 }
 /*-----------------------------------------------------------------------*/
 
-/*Method responsible for enabling the 'outra-igreja' field*/
-document.getElementById('igreja').onchange = function(){
-    if(igreja.value == 'outra-igreja') {
-        enableComponent('outra-igreja')
-        enableComponent('label-outra-igreja')
-        enableRequired('outra-igreja')
-    } else {
-        disableComponent('outra-igreja')
-        disableComponent('label-outra-igreja')
-        disableRequired('outra-igreja')
-    }
-};
-/*-----------------------------------------------------------------------*/
 
 /*Methods responsible for enabling or disabling HTML elements*/
 function disableComponent(id) {
@@ -180,6 +167,7 @@ function enableComponent(id) {
 }
 /*-----------------------------------------------------------*/
 
+
 /*Methods responsible for adding the 'required' attribute to HTML elements*/
 function enableRequired(id) {
     if(!document.getElementById(id).hasAttribute('required')){
@@ -193,6 +181,21 @@ function disableRequired(id) {
     }
 }
 /*---------------------------------------------------------------------------------*/
+
+
+/*Method responsible for enabling the 'outra-igreja' field*/
+document.getElementById('igreja').onchange = function(){
+    if(igreja.value == 'outra-igreja') {
+        enableComponent('outra-igreja')
+        enableComponent('label-outra-igreja')
+        enableRequired('outra-igreja')
+    } else {
+        disableComponent('outra-igreja')
+        disableComponent('label-outra-igreja')
+        disableRequired('outra-igreja')
+    }
+};
+/*-----------------------------------------------------------------------*/
 
 
 /*Method called based on participant's date of birth*/
@@ -226,3 +229,45 @@ function calculateAge(birth, today){
     return Math.floor(Math.ceil(Math.abs(birth.getTime() - today.getTime()) / (1000 * 3600 * 24)) / 365.25);
 }
 /*-----------------------------------------------------------------------*/
+
+/*Instance of the subscribed object (performed only after confirmation of the subscription)*/
+var camping_person;
+const submit_button = document.querySelector("#submitButton");
+
+submit_button.addEventListener("click", event => {
+    var all_fields = document.querySelectorAll('.field');
+    var data_set = [];
+
+    all_fields.forEach((current_field) => {
+        data_set.push(current_field.value);
+    })
+
+    camping_person = new Inscrito(data_set);
+    console.log(camping_person)
+})
+
+function Inscrito(data_set){
+    this.nome = data_set[0];
+    this.sobrenome = data_set[1];
+    this.apelido = data_set[2];
+    this.data_nascimento = data_set[3];
+    this.nome_acompanhante = data_set[4];
+    this.rg = data_set[5];
+    this.cpf = data_set[6];
+    this.nome_responsavel = data_set[7];
+    this.rg_responsavel = data_set[8];
+    this.ddd = data_set[9];
+    this.numero_telefone = data_set[10];
+    this.email = data_set[11];
+    this.zip = data_set[12];
+    this.logradouro = data_set[13];
+    this.number = data_set[14];
+    this.bairro = data_set[15];
+    this.localidade = data_set[16];
+    this.uf = data_set[17];
+    this.igreja = data_set[18]
+    this.outra_igreja = data_set[19];
+    this.alergias = data_set[20];
+    this.remedios = data_set[21];
+}
+/*-----------------------*/

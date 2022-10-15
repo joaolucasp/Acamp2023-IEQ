@@ -98,7 +98,7 @@
   <!-- Carousel Forms -->
   <div class="row">
     <div class="col-md-12">
-      <form action="index.html">
+      <form action="payment.html">
         <div id="carouselForms" class="carousel slide" data-bs-ride="false" data-bs-wrap="false" data-bs-interval="false" data-bs-touch="true">     
 
           <!-- Carousel Contents -->
@@ -659,42 +659,11 @@
               <div id="registrationConfirmation" class="d-none">
                 <h3 class="title mt-4 mb-2">Deseja confirmar sua inscrição?</h3>
 
-                <button type="submit"
-                class="btn btn-custom1 bg-success"
-                data-bs-slide="next" data-bs-target="#carouselForms"
-                onclick="enableComponent('paymentInformation')">Sim</button>
+                <button type="submit" id="submitButton"
+                class="btn btn-custom1 bg-success">Sim</button>
 
               </div>
 
-            </div>
-
-            <!-- Sixth Section Forms -->
-            <div class="carousel-item" id="section-6">
-
-              <!-- Information Payment -->
-              <div id="paymentInformation" class="d-none">
-                <h3 class="title mt-4 mb-2">
-                  Dados registrados, para concluir sua inscrição efetue o pagamento! 
-                </h3>
-
-                <div id="section-6-description">
-                  <h3 class="title mt-3 mb-4" style="font-size: 1em;">
-                    Deseja gerar o link de pagamento agora?
-                  </h3>
-  
-                  <button type="button" class="btn btn-custom2">Não</button>
-                  <button type="button" class="btn btn-custom1" onclick="enableComponent('linkPayment'); disableComponent('section-6-description')">Sim</button>
-
-                </div>
-
-                <div id="linkPayment" class="d-none mt-2">
-                  <a href="" class="btn btn-custom1 bg-success">Link para pagamento</a>
-                  <figure class="gif mt-3">
-                    <img src="images/gif/gif-2.gif" alt="">
-                  </figure>
-                </div>
-              </div>
-        
             </div>
 
           </div>
