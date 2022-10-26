@@ -69,6 +69,7 @@ section {
 }
 
 #secundarySlider {
+    width: 80%;
     border-radius: 50px;
     box-shadow: 15px 15px 80px #13d9c9b3;
 }
