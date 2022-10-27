@@ -1,0 +1,23 @@
+name: acamp2023.com.br CI
+on:
+  push:
+    branches: 
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do repositório
+        uses: action/checkout@v1
+      - name: Deploy para a VPS Azure
+        uses: easingthemes/ssh-deploy@main
+        env:
+          # SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
+          ARGS: "rltgoVzvO --delete"
+          # SOURCE: ${{ secrets.SOURCE }}
+          SOURCE: "src/"
+          # REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          REMOTE_USER: "roots"
+          # REMOTE_TARGET: ${{ secrets.REMOTE_TARGET }}
+          TARGET: "/home/roots/www"
