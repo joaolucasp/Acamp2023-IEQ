@@ -1,41 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <!-- Meta tags Obrigatórias -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS & JS-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+<head>
+  <!-- Meta tags Obrigatórias -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="../stylesheet/style-subscription.css" type="text/css">
-    <link rel="stylesheet" href="../stylesheet/progressbar.css" type="text/css">
+  <!-- Bootstrap CSS & JS-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Font Awesome Icons -->
-    <script src="https://kit.fontawesome.com/eac825cd8d.js" crossorigin="anonymous"></script>
+  <!-- Style CSS -->
+  <link rel="stylesheet" href="../stylesheet/style-subscription.css" type="text/css">
+  <link rel="stylesheet" href="../stylesheet/progressbar.css" type="text/css">
 
-    <!-- Shortcut Icon -->
-    <link rel="shortcut icon" href="../images/logoPRETO.png" type="image/png">
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/eac825cd8d.js" crossorigin="anonymous"></script>
 
-    <!-- HTML5Shiv -->
-    <!--[if lt IE 9]>
+  <!-- Shortcut Icon -->
+  <link rel="shortcut icon" href="../images/logoPRETO.png" type="image/png">
+
+  <!-- HTML5Shiv -->
+  <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <![endif]-->
 
-    <script src="../components/cep/js/main.js"></script>
+  <script src="../components/cep/js/main.js"></script>
 
-    <title>Inscrição Acampamento 2023</title>
-     
-  </head>
-  <body>
+  <title>Inscrição Acampamento 2023</title>
 
-    <!-- Header -->
+</head>
+
+<body>
+
+  <!-- Header -->
   <div class="container">
     <div class="row">
       <div class="col-md-12 d-flex header w-50 mt-4">
-        <img class="img-fluid logo mt-1 align-self-center" src="../images/logo.png" alt="Imagem logo regional de jovens região 513">
+        <img class="img-fluid logo mt-1 align-self-center" src="../images/logo.png"
+          alt="Imagem logo regional de jovens região 513">
         <img class="img-fluid divider mt-2 align-self-center" src="../images/components/pipe-noborder-white.png" alt="">
 
         <!-- Region and Church Information -->
@@ -91,596 +94,590 @@
         </span>
         <div class="label text-muted mt-2 d-none d-lg-block">Medicamentos</div>
       </a>
-     
+
     </li>
   </ul>
 
   <!-- Carousel Forms -->
   <div class="row">
     <div class="col-md-12">
-      <form action="payment.html">
-        <div id="carouselForms" class="carousel slide" data-bs-ride="false" data-bs-wrap="false" data-bs-interval="false" data-bs-touch="true">     
+      <div id="carouselForms" class="carousel slide" data-bs-ride="false" data-bs-wrap="false" data-bs-interval="false"
+        data-bs-touch="true">
 
-          <!-- Carousel Contents -->
-          <div class="carousel-inner box text-center">
-            <!-- First Section Forms -->
-            <div class="carousel-item active" onchange="removeInvalid(id)" id="section-1">
-              <h3 class="mt-4 mb-4 title">Precisamos saber mais sobre você</h3>
+        <!-- Carousel Contents -->
+        <div class="carousel-inner box text-center">
+          <!-- First Section Forms -->
+          <div class="carousel-item active" onchange="removeInvalid(id)" id="section-1">
+            <h3 class="mt-4 mb-4 title">Precisamos saber mais sobre você</h3>
 
-              <fieldset class="w-75 fieldset">
+            <fieldset class="w-75 fieldset">
 
-                <div class="form-floating">
-                  <input required='' name="nome" id="nome"
-                  class="form-control field field-section-1"
-                  inputmode="text" minlength="2"
+              <div class="form-floating">
+                <input required='' name="nome" id="nome" class="form-control field field-section-1" inputmode="text"
+                  minlength="2"
                   onkeypress="return (event.charCode >= 65 && event.charCode <= 126) || (event.charCode >= 192 && event.charCode <= 251)"
                   type="text" placeholder="Nome">
-                  <label for="nome">Nome</label>
-                </div>
-                
-                <div class="form-floating">
-                  <input required='' name="sobrenome" id="sobrenome"
-                  class="form-control field field-section-1"
+                <label for="nome">Nome</label>
+              </div>
+
+              <div class="form-floating">
+                <input required='' name="sobrenome" id="sobrenome" class="form-control field field-section-1"
                   inputmode="text" minlength="2"
                   onkeypress="return (event.charCode >= 65 && event.charCode <= 126) || (event.charCode >= 192 && event.charCode <= 251)"
                   type="text" placeholder="Sobrenome">
-                  <label for="sobrenome">Sobrenome</label>
-                </div>
-                
-                <div class="form-floating">
-                  <input required='' name="apelido" id="apelido"
-                  class="form-control field field-section-1"
+                <label for="sobrenome">Sobrenome</label>
+              </div>
+
+              <div class="form-floating">
+                <input required='' name="apelido" id="apelido" class="form-control field field-section-1"
                   inputmode="text" minlength="2"
                   onkeypress="return (event.charCode >= 65 && event.charCode <= 126) || (event.charCode >= 192 && event.charCode <= 251)"
                   type="text" placeholder="Apelido">
-                  <label for="apelido">Apelido</label>
-                </div>
-
-                <div class="form-floating">
-                  <input required='' name="data-nascimento" id="data-nascimento"
-                  class="form-control field field-section-1" 
-                  inputmode="date"
-                  type="date">
-                  <label for="data-nascimento">Data de nascimento</label>
-                </div>
-
-              </fieldset>
-
-              <h4 class="d-inline title-secundary">Possui irmão acompanhante?</h4>
-              <div class="d-inline">
-                <button type="button" id="sim-acompanhante" class="btn btn-custom1"
-                onclick="enableComponent('nome-acompanhante'); disableComponent(id); enableRequired('nome-acompanhante'); enableComponent('label-acompanhante');" >Sim</button>
-
-                <button type="button" id="nao-acompanhante" class="btn btn-custom2"
-                onclick="disableComponent('nome-acompanhante'); enableComponent('sim-acompanhante'); disableRequired('nome-acompanhante'); disableComponent('label-acompanhante'); checkFields('next');">Não</button>
+                <label for="apelido">Apelido</label>
               </div>
 
-              <fieldset class="w-75 fieldset">
-                <div class="form-floating">
-                  <input name="nome-acompanhante" id="nome-acompanhante"
-                  class="form-control field field-section-1 d-none"
+              <div class="form-floating">
+                <input required='' name="data-nascimento" id="data-nascimento"
+                  class="form-control field field-section-1" inputmode="date" type="date">
+                <label for="data-nascimento">Data de nascimento</label>
+              </div>
+
+            </fieldset>
+
+            <h4 class="d-inline title-secundary">Possui irmão acompanhante?</h4>
+            <div class="d-inline">
+              <button type="button" id="sim-acompanhante" class="btn btn-custom1"
+                onclick="enableComponent('nome-acompanhante'); disableComponent(id); enableRequired('nome-acompanhante'); enableComponent('label-acompanhante');">Sim</button>
+
+              <button type="button" id="nao-acompanhante" class="btn btn-custom2"
+                onclick="disableComponent('nome-acompanhante'); enableComponent('sim-acompanhante'); disableRequired('nome-acompanhante'); disableComponent('label-acompanhante'); checkFields('next');">Não</button>
+            </div>
+
+            <fieldset class="w-75 fieldset">
+              <div class="form-floating">
+                <input name="nome-acompanhante" id="nome-acompanhante" class="form-control field field-section-1 d-none"
                   inputmode="text" minlength="2"
                   onkeypress="return (event.charCode >= 65 && event.charCode <= 126) || (event.charCode >= 192 && event.charCode <= 251)"
                   type="text" placeholder="Qual o nome completo do seu irmão?">
-                  <label id="label-acompanhante" for="nome-acompanhante" class="d-none">Nome do irmão acompanhante</label>
-                </div>
-              </fieldset>           
-              
-            </div>
-
-            <!-- Second Section Forms -->
-            <div class="carousel-item" onchange="removeInvalid(id)" id="section-2">
-              <h3 class="mt-4 mb-4 title">Informe seus documentos</h3>
-              <fieldset class="w-75 fieldset">
-                <div class="form-floating">
-                  <input required='' id="rg"
-                  class="form-control field field-section-2"
-                  inputmode="numeric" minlength="8" maxlength="10"
-                  onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-                  placeholder="RG (apenas números)">
-                  <label for="rg">RG (apenas números)</label>
-                </div>
-
-                <div class="form-floating">
-                  <input required='' id="cpf"
-                  class="form-control field field-section-2"
-                  inputmode="numeric" minlength="11" maxlength="11" 
-                  onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-                  placeholder="CPF (apenas números)">
-                  <label for="cpf">CPF (apenas números)</label>
-                </div>
-
-                <div class="form-floating">
-                  <input name="nome-responsavel" id="nome-responsavel"
-                  class="form-control field field-section-2 d-none" 
-                  inputmode="text" minlength="2"
-                  onkeypress="return (event.charCode >= 65 && event.charCode <= 126) || (event.charCode >= 192 && event.charCode <= 251)"
-                  type="text" placeholder="Nome completo do responsável">
-                  <label id="label-nome-responsavel" for="nome-responsavel" class="d-none">Nome do responsável</label>
-                </div>
-
-                <div class="form-floating">
-                  <input id="rg-responsavel"
-                  class="form-control field field-section-2 d-none"
-                  inputmode="numeric" minlength="8" maxlength="10" 
-                  onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-                  placeholder="RG do responsável (apenas números)">
-                  <label id="label-rg-responsavel" for="rg-responsavel" class="d-none">RG do responsável (apenas números)</label>
-                </div>
-              </fieldset>
-
-            </div>
-
-            <!-- Third Section Forms -->
-            <div class="carousel-item" onchange="removeInvalid(id)" id="section-3">
-              <h3 class="mt-4 mb-4 title">Agora precisamos de algumas informações de contato</h3>
-              
-              <fieldset class="w-75 fieldset">
-               <div class="row" style="margin-top: -20px; margin-bottom: -20px;">
-                  <div class="col-4">
-                    <div class="form-floating">
-                      <select required="" inputmode="select" class="form-control field field-section-3" name="ddd" id="ddd">
-                        <option value="" disabled selected class="text-center">(+XX)</option>
-                        <option value="11">+11</option>
-                        <option value="12">+12</option>
-                        <option value="13">+13</option>
-                        <option value="14">+14</option>
-                        <option value="15">+15</option>
-                        <option value="16">+16</option>
-                        <option value="17">+17</option>
-                        <option value="18">+18</option>
-                        <option value="19">+19</option>
-                        <option value="20">+20</option>
-                        <option value="21">+21</option>
-                        <option value="22">+22</option>
-                        <option value="23">+23</option>
-                        <option value="24">+24</option>
-                        <option value="25">+25</option>
-                        <option value="26">+26</option>
-                        <option value="27">+27</option>
-                        <option value="28">+28</option>
-                        <option value="29">+29</option>
-                        <option value="30">+30</option>
-                        <option value="31">+31</option>
-                        <option value="32">+32</option>
-                        <option value="33">+33</option>
-                        <option value="34">+34</option>
-                        <option value="35">+35</option>
-                        <option value="36">+36</option>
-                        <option value="37">+37</option>
-                        <option value="38">+38</option>
-                        <option value="39">+39</option>
-                        <option value="40">+40</option>
-                        <option value="41">+41</option>
-                        <option value="42">+42</option>
-                        <option value="43">+43</option>
-                        <option value="44">+44</option>
-                        <option value="45">+45</option>
-                        <option value="46">+46</option>
-                        <option value="47">+47</option>
-                        <option value="48">+48</option>
-                        <option value="49">+49</option>
-                        <option value="50">+50</option>
-                        <option value="51">+51</option>
-                        <option value="52">+52</option>
-                        <option value="53">+53</option>
-                        <option value="54">+54</option>
-                        <option value="55">+55</option>
-                        <option value="56">+56</option>
-                        <option value="57">+57</option>
-                        <option value="58">+58</option>
-                        <option value="59">+59</option>
-                        <option value="60">+60</option>
-                        <option value="61">+61</option>
-                        <option value="62">+62</option>
-                        <option value="63">+63</option>
-                        <option value="64">+64</option>
-                        <option value="65">+65</option>
-                        <option value="66">+66</option>
-                        <option value="67">+67</option>
-                        <option value="68">+68</option>
-                        <option value="69">+69</option>
-                        <option value="70">+70</option>
-                        <option value="71">+71</option>
-                        <option value="72">+72</option>
-                        <option value="73">+73</option>
-                        <option value="74">+74</option>
-                        <option value="75">+75</option>
-                        <option value="76">+76</option>
-                        <option value="77">+77</option>
-                        <option value="78">+78</option>
-                        <option value="79">+79</option>
-                        <option value="80">+80</option>
-                        <option value="81">+81</option>
-                        <option value="82">+82</option>
-                        <option value="83">+83</option>
-                        <option value="84">+84</option>
-                        <option value="85">+85</option>
-                        <option value="86">+86</option>
-                        <option value="87">+87</option>
-                        <option value="88">+88</option>
-                        <option value="89">+89</option>
-                        <option value="90">+90</option>
-                        <option value="91">+91</option>
-                        <option value="92">+92</option>
-                        <option value="93">+93</option>
-                        <option value="94">+94</option>
-                        <option value="95">+95</option>
-                        <option value="96">+96</option>
-                        <option value="97">+97</option>
-                        <option value="98">+98</option>
-                        <option value="99">+99</option>
-                        <option value="100">+100</option>
-                      </select>
-                      <label for="ddd">DDD</label>
-                    </div>
-                  </div>
-                  <div class="col-8">
-                    <div class="form-floating">
-                      <input required='' name="numero-telefone" id="numero-telefone"
-                      class="form-control field field-section-3"
-                      inputmode="numeric" maxlength="11" minlength="8" 
-                      onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-                      type="tel" placeholder="Celular (12) 34569-0123">
-                      <label for="numero-telefone">Número de telefone (01) 23456-7890</label>
-                    </div>
-                  </div>
-               </div>
-
-                <div class="form-floating">
-                  <input required='' name="email" id="email"
-                  class="form-control field field-section-3" 
-                  inputmode="email" type="email" placeholder="Email">
-                  <label for="email">E-mail</label>
-                </div>
-                
-                <div class="form-floating">
-                  <input required='' id="zip"
-                  class="form-control field field-section-3" 
-                  inputmode="numeric" minlength="2" maxlength="8" 
-                  onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-                  placeholder="CEP (apenas números)">
-                  <label for="zip">CEP (apenas números)</label>
-                </div>     
-  
-                <div class="row" style="margin-top: -20px; margin-bottom: -20px;">
-                  <div class="col-9">
-                    <div class="form-floating">
-                      <input required='' name="logradouro" id="logradouro"
-                      class="form-control field field-section-3"
-                      inputmode="text" minlength="2"
-                      type="text" placeholder="Rua">
-                      <label for="logradouro">Rua</label>
-                    </div>
-                  </div>
-
-                  <div class="col-3">
-                    <div class="form-floating">
-                      <input required='' name="number" id="number"
-                      class="form-control field field-section-3"
-                      inputmode="numeric" minlength="1" maxlength="5" 
-                      onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-                      placeholder="Número">
-                      <label for="number">Número</label>
-                    </div>
-                  </div>
-
-                </div>
-
-                <div class="row" style="margin-top: -20px; margin-bottom: -20px;">
-                  <div class="col-md-4">
-                    <div class="form-floating">
-                      <input required='' name="bairro" id="bairro"
-                      class="form-control field field-section-3"
-                      inputmode="text" minlength="2"
-                      type="text" placeholder="Bairro">
-                      <label for="bairro">Bairro</label>
-                    </div>
-                  </div>
-
-                  <div class="col-md-4">
-                    <div class="form-floating">
-                      <input required='' name="localidade" id="localidade"
-                      class="form-control field field-section-3"
-                      inputmode="text" minlength="2"
-                      type="text" placeholder="Cidade">
-                      <label for="localidade">Cidade</label>
-                    </div>
-                  </div>
-  
-                  <div class="col-md-4">
-                    <div class="form-floating">
-                      <input required='' name="uf" id="uf"
-                      class="form-control field field-section-3"
-                      inputmode="text" minlength="2"
-                      type="text"  placeholder="Estado">
-                      <label for="uf">Estado</label>
-                    </div>
-                  </div>
-                 
-                </div>
-              </fieldset> 
-
-              <h3 class="mt-4 mb-4 title">Em qual bairro fica sua igreja?</h3>
-
-              <fieldset class="w-75 fieldset">
-                <select required="" inputmode="select" class="form-control field field-section-3" name="igreja" id="igreja">
-                  <option value="" disabled="" selected>Opções para escolha</option>
-                  <option value="sem-igreja">Não frequento</option>
-                  <option value="ieq-aguavermelha">IEQ - Água Vermelha</option>
-                  <option value="ieq-azulville">IEQ - Azulville</option>
-                  <option value="ieq-boavista">IEQ - Boa Vista</option>
-                  <option value="ieq-botafogo">IEQ - Botafogo</option>
-                  <option value="ieq-cruzeiro">IEQ - Cruzeiro do Sul</option>
-                  <option value="ieq-descalvado">IEQ - Descalvado</option>
-                  <option value="ieq-ibate">IEQ - Ibaté</option>
-                  <option value="ieq-itirapina">IEQ - Itirapina</option>
-                  <option value="ieq-tangara">IEQ - Jardim Tangará</option>
-                  <option value="ieq-jockeyclub">IEQ - Jockey Club</option>
-                  <option value="ieq-planaltoparaiso">IEQ - Planalto Paraiso</option>
-                  <option value="ieq-ribeiraobonito">IEQ - Ribeirão Bonito</option>
-                  <option value="ieq-santafelicia">IEQ - Santa Felícia</option>
-                  <option value="ieq-vilabrasilia">IEQ - Vila Brasília</option>
-                  <option value="outra-igreja">Outra</option>
-                </select>
-                
-                <div class="form-floating">
-                  <input name="outra-igreja" id="outra-igreja"
-                  class="form-control field field-section-3 d-none"
-                  inputmode="text" minlength="2"
-                  onkeypress="return (event.charCode >= 65 && event.charCode <= 126) || (event.charCode >= 192 && event.charCode <= 251)"
-                  type="text" placeholder="Insira o nome da sua igreja">
-                  <label id="label-outra-igreja" for="outra-igreja" class="d-none">Insira o nome da sua igreja</label>
-                </div>
-
-              </fieldset>
-  
-            </div>
-
-            <!-- Forth Section Forms -->
-            <div class="carousel-item" onchange="removeInvalid(id)" id="section-4">
-              <h3 class="title mt-4 mb-4">Você possui alguma alergia ou restrição alimentar?</h3>
-
-              <!-- Options (Yes/No)-->
-              <div class="d-inline">
-                <button type="button"
-                class="btn btn-custom1"
-                onclick="enableComponent('alergias'); enableComponent('label-alergias');enableRequired('alergias');">Sim</button>
-
-                <button type="button"
-                class="btn btn-custom2"
-                onclick="disableComponent('alergias'); disableComponent('label-alergias');disableRequired('alergias');">Não</button>
+                <label id="label-acompanhante" for="nome-acompanhante" class="d-none">Nome do irmão acompanhante</label>
               </div>
-
-              <fieldset class="w-75 fieldset">
-                <div class="form-floating">
-                  <input name="alergias" id="alergias"
-                  class="form-control field field-single field-section-4 d-none"
-                  inputmode="text" minlength="2"
-                  type="text" placeholder="Alergias">
-                  <label id="label-alergias" for="alergias" class="d-none">Alergias</label>
-                </div>
-              </fieldset>
-
-              <h3 class="title mt-4 mb-4">Realiza o uso contínuo de alguma medicação?</h3>
-
-              <!-- Options (Yes/No)-->
-              <div class="d-inline">
-                <button type="button"
-                class="btn btn-custom1"
-                onclick="enableComponent('remedios'); enableComponent('label-remedios'); enableRequired('remedios');">Sim</button>
-
-                <button type="button"
-                class="btn btn-custom2"
-                onclick="disableComponent('remedios'); disableComponent('label-remedios');disableRequired('remedios'); checkFields('next')">Não</button>
-              </div>
-              
-              <fieldset class="w-75 fieldset mb-3">
-                <div class="form-floating">
-                  <input name="remedios" id="remedios"
-                  class="form-control field field-single field-section-4 d-none"
-                  inputmode="text" minlength="2"
-                  type="text" placeholder="Remédios (qual(is) e a quantidade diária)">
-                  <label id="label-remedios" for="remedios" class="d-none">Remédios (qual(is) e a quantidade diária)</label>
-                </div>
-              </fieldset>
-
-            </div>
-
-             <!-- Fifth Section Forms -->
-            <div class="carousel-item" id="section-5">
-              <h3 class="title mt-4 mb-4">Já temos todos os seus dados!</h3>
-
-              <h3 class="title mt-4 mb-4" style="font-size: 1.1em;">Mas fique atento, para prosseguir você precisa concordar com as regras de funcionamento do nosso Acampamento.</h3>
-
-              <figure class="gif">
-                <img src="../images/gif/gif-3.gif" alt="">
-              </figure>
-              
-              <!-- Button trigger modal -->
-              <button type="button"
-              class="btn btn-custom1 mt-2"
-              data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                Ler todas as regras
-              </button>
-
-              <!-- Modal -->
-              <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="staticBackdropLabel">Regras</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body text-start">
-                      <p class="fw-bold">
-                        1.1. Chácara Recanto das Graúnas I, II, III e IV, Alameda dos Tucanos - Balneário do 29, São Carlos- SP, 13560-001
-                      </p>
-                      <p class="fw-bold">
-                        2 - Data e horário 
-                      </p>
-                      <p>
-                        2.1. Data: XXXXXXXXX à XXXXXXXXX <br>
-                        2.2. Chegada: 15:00 (XX) e saída às 14:00 (XX)
-                      </p>
-                      <p class="fw-bold">
-                        3 - Transporte 
-                      </p>
-                      <p>
-                        3.1. Haverá um ônibus para transportar os acampantes no dia XX. Os pontos e horários serão divulgados pelos líderes e/ou redes sociais. Necessário sinalizar previamente o uso do transporte. <br>
-                        3.2. O uso deste serviço não é obrigatório, pois os acampantes poderão optar pelo seu próprio deslocamento.
-                      </p>
-                      <p class="fw-bold">
-                        4 - Valor/ Pagamento
-                      </p>
-                      <p>
-                        4.1. Pagamento via PIX, cartão de crédito em até 12x, cartão de débito, boleto ou depósito em conta
-                        <br>4.2. Se o pagamento for via PIX, boleto ou depósito em conta será cobrado à vista
-                        <br>4.3. O link para pagamento será enviado para o email e WhatsApp cadastrado durante a inscrição
-                        <br>4.4. Caso o acampante tenha se beneficiado de desconto para irmãos de sangue e por algum motivo um dos irmãos não tenha efetuado o pagamento, posteriormente, o acampante receberá um link para pagamento referente à diferença do desconto indevido.
-                        <br>4.5. O prazo para pagamento com desconto de pré-inscrição e/ou irmãos de sangue será até o dia XXXXX. Após este prazo todos pagarão o valor integral de R$250,00.
-                      </p>
-                      <p class="fw-bold">
-                        5 - Participantes/ itens essenciais
-                      </p>
-                      <p>
-                        5.1. Todos os menores de 18 (dezoito) anos poderão participar com a autorização dos pais, entregues para os líderes ou enviado por correio para o escritório regional (impresso e assinado)
-                        <br>5.2. Qualquer problema ou dificuldade deverá ser informada a organização
-                        <br>5.3. O evento disponibilizará os colchões para todos, mas caso o participante decida fazer camping terá que <br>levar a sua barraca e o seu colchão
-                        <br>5.4. Os acampantes deverão levar itens básicos para sua estadia como:
-                      </p>
-                      <p class="fw-bold">
-                        Higiene pessoal:
-                      </p>
-                      <p>
-                        Escova de dente e creme dental
-                        <br>Sabonete e bucha
-                        <br>Shampoo e condicionador
-                        <br>Desodorante e perfume
-                        <br>Absorvente e outros
-                        <br>Toalha de banho
-                        <br>Protetor solar                        
-                      </p>
-                      <p class="fw-bold">
-                        Alimentação:
-                      </p>
-                      <p>
-                        Caneca
-                        <br>Prato
-                        <br>Talheres
-                      </p>
-                      <p class="fw-bold">
-                        Dormitórios:
-                      </p>
-                      <p>
-                        Travesseiro
-                        <br>Roupa de cama (lençol, tevesseiro, fronha e cobertor)
-                        <br>Pijama
-                      </p>
-                      <p class="fw-bold">
-                        Roupas para piscina:
-                      </p>
-                      <p>
-                        É obrigatório entrar de camiseta e bermuda por cima da roupa de banho
-                        <br>Biquíni/Sunga (por baixo)
-                        <br>Não usar jeans ou roupas com zíper, botões, fivelas, etc.
-                      </p>
-                      <p class="fw-bold">
-                        Não esquecer:
-                      </p>
-                      <p>
-                        Bíblia
-                        <br>Guarda- chuva
-                        <br>Remédios (se necessário)
-                        <br>Papel e caneta para anotações
-                      </p>
-                      <p class="fw-bold">
-                        6 - Alimentação
-                      </p>
-                      <p>
-                        6.1. O acampamento fornecerá as 4 refeições (café da manhã, almoço, café da tarde e jantar)
-                        <br>6.2. Caso o participante queira comer algo a parte (doces, refrigerante...) haverá uma cantina disponível
-                      </p>
-                      <p class="fw-bold">
-                        7 - Programação
-                      </p>
-                      <p>
-                        7.1. A programação estará fixada nos murais informados no primeiro dia de acampamento
-                      </p>
-                      <p class="fw-bold">
-                        8 - Dormitórios
-                      </p>
-                      <p>
-                        8.1. É obrigatório que o acampante mantenha organizado os dormitórios, mantendo o local higienizado
-                        <br>8.2. Os participantes dividirão quarto com outras pessoas
-                        <br>8.3. O acampante deverá ficar atento aos horário das programações, refeições, toque de recolher e despertar
-                        <br>8.4. Será proibido ao participante entrar no dormitório do sexo biológico oposto                        
-                      </p>
-                      <p class="fw-bold">
-                        9 - Camping
-                      </p>
-                      <p>
-                        9.1. Caso o acampante opte por dormir em barraca de camping (de sua propriedade), este deverá levar além dos itens contidos no parágrafo 5.4 o colchão para inserir em sua barraca
-                        <br>9.2. Todas as obrigações dispostas nos parágrafos 8.1 e 8.4 também se aplicam aos acampantes que optarem por barracas
-                        <br>9.3. A organizão não fornece barraca e/ou colchão para o optante dessa modalidade
-                      </p>
-                      <p class="fw-bold">
-                        10 - Regras de boa convivência
-                      </p>
-                      <p>
-                        10.1.Não será permitido:
-                        <br>10.1.1 - Levar ou fazer uso de bebidas alcoólicas, cigarros (mesmo os eletrônicos), narguile, drogas, jogos de azar (baralho e seus similares), bombas e/ou elementos pirotécnicos (fogos de qualquer tipo).
-                        <br>10.1.2 - Levar ou fazer uso de armas de fogo, armas brancas (faca, canivete, punhal, soco-inglês e todos os similares)
-                        <br>10.1.3 - Beijar e/ou namorar qualquer participante, mesmo que sejam casais
-                        <br>10.1.4 - Sair do local alojamento após o horário estabelecido para o descanso ou das dependências do Acampamento sem autorização de um lider ou organizadores
-                        <br>10.1.5 - Fazer uso de medicamentos não mencionados durante a inscrição
-                        <br>10.1.6 - Negar-se a obedecer os horários e atividades previstas no cronograma a ser fixado
-                        <br>10.1.7 - Brincar em volta da piscina ou promover brincadeiras com potencial de ferimento
-                        <br>10.1.8 - Qualquer tipo de discriminação ou apelidos e brincadeiras pejorativas, bem como palavras de baixo calão
-                        <br>10.1.9 - Utilizar fones de ouvido durante as atividades e ministrações
-                        <br>10.1.10 - Fazer uso de óculos escuros durante as ministrações
-                        <br>10.2. Responsabilidades do acampante
-                        <br>10.2.1 - A organização do evento não será responsável por qualquer dano ou perda de itens pessoais, sendo obrigação do participante zelar por seus pertences.
-                        <br>10.2.2 - A participação quanto às programações serão obrigatórias.
-                      </p>
-                      <p class="fw-bold">
-                        O não cumprimento de qualquer item do tópico 10 poderá ocasionar o cancelamento da inscrição sem direito a ressarcimento!
-                      </p>
-                    </div>
-                    <div class="modal-footer">
-                      <span>Você concorda com todas as regras pré-estabelecidas acima?</span>
-                      <button type="button" class="btn btn-custom2" data-bs-dismiss="modal">Não</button>
-                      <button type="button" class="btn btn-custom1" data-bs-dismiss="modal" onclick="enableComponent('registrationConfirmation')">Sim</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div id="registrationConfirmation" class="d-none">
-                <h3 class="title mt-4 mb-2">Deseja confirmar sua inscrição?</h3>
-
-                <button type="submit" id="submitButton"
-                class="btn btn-custom1 bg-success">Sim</button>
-
-              </div>
-
-            </div>
+            </fieldset>
 
           </div>
 
-          <!--Carousel Controls-->
-          <div class="text-center mb-3">
-            <button id="carousel-control-prev" class="btn btn-secondary d-none" type="button" onclick="checkFields('prev')" style="margin-right: 15px;">Anterior</button>
-            
-            <button id="carousel-control-next" class="btn btn-success" type="button" onclick="checkFields('next')">Próximo</button>
+          <!-- Second Section Forms -->
+          <div class="carousel-item" onchange="removeInvalid(id)" id="section-2">
+            <h3 class="mt-4 mb-4 title">Informe seus documentos</h3>
+            <fieldset class="w-75 fieldset">
+              <div class="form-floating">
+                <input required='' id="rg" class="form-control field field-section-2" inputmode="numeric" minlength="8"
+                  maxlength="10" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                  placeholder="RG (apenas números)">
+                <label for="rg">RG (apenas números)</label>
+              </div>
+
+              <div class="form-floating">
+                <input required='' id="cpf" class="form-control field field-section-2" inputmode="numeric"
+                  minlength="11" maxlength="11" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                  placeholder="CPF (apenas números)">
+                <label for="cpf">CPF (apenas números)</label>
+              </div>
+
+              <div class="form-floating">
+                <input name="nome-responsavel" id="nome-responsavel" class="form-control field field-section-2 d-none"
+                  inputmode="text" minlength="2"
+                  onkeypress="return (event.charCode >= 65 && event.charCode <= 126) || (event.charCode >= 192 && event.charCode <= 251)"
+                  type="text" placeholder="Nome completo do responsável">
+                <label id="label-nome-responsavel" for="nome-responsavel" class="d-none">Nome do responsável</label>
+              </div>
+
+              <div class="form-floating">
+                <input id="rg-responsavel" class="form-control field field-section-2 d-none" inputmode="numeric"
+                  minlength="8" maxlength="10" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                  placeholder="RG do responsável (apenas números)">
+                <label id="label-rg-responsavel" for="rg-responsavel" class="d-none">RG do responsável (apenas
+                  números)</label>
+              </div>
+            </fieldset>
+
+          </div>
+
+          <!-- Third Section Forms -->
+          <div class="carousel-item" onchange="removeInvalid(id)" id="section-3">
+            <h3 class="mt-4 mb-4 title">Agora precisamos de algumas informações de contato</h3>
+
+            <fieldset class="w-75 fieldset">
+              <div class="row" style="margin-top: -20px; margin-bottom: -20px;">
+                <div class="col-4">
+                  <div class="form-floating">
+                    <select required="" inputmode="select" class="form-control field field-section-3" name="ddd"
+                      id="ddd">
+                      <option value="" disabled selected class="text-center">(+XX)</option>
+                      <option value="11">+11</option>
+                      <option value="12">+12</option>
+                      <option value="13">+13</option>
+                      <option value="14">+14</option>
+                      <option value="15">+15</option>
+                      <option value="16">+16</option>
+                      <option value="17">+17</option>
+                      <option value="18">+18</option>
+                      <option value="19">+19</option>
+                      <option value="20">+20</option>
+                      <option value="21">+21</option>
+                      <option value="22">+22</option>
+                      <option value="23">+23</option>
+                      <option value="24">+24</option>
+                      <option value="25">+25</option>
+                      <option value="26">+26</option>
+                      <option value="27">+27</option>
+                      <option value="28">+28</option>
+                      <option value="29">+29</option>
+                      <option value="30">+30</option>
+                      <option value="31">+31</option>
+                      <option value="32">+32</option>
+                      <option value="33">+33</option>
+                      <option value="34">+34</option>
+                      <option value="35">+35</option>
+                      <option value="36">+36</option>
+                      <option value="37">+37</option>
+                      <option value="38">+38</option>
+                      <option value="39">+39</option>
+                      <option value="40">+40</option>
+                      <option value="41">+41</option>
+                      <option value="42">+42</option>
+                      <option value="43">+43</option>
+                      <option value="44">+44</option>
+                      <option value="45">+45</option>
+                      <option value="46">+46</option>
+                      <option value="47">+47</option>
+                      <option value="48">+48</option>
+                      <option value="49">+49</option>
+                      <option value="50">+50</option>
+                      <option value="51">+51</option>
+                      <option value="52">+52</option>
+                      <option value="53">+53</option>
+                      <option value="54">+54</option>
+                      <option value="55">+55</option>
+                      <option value="56">+56</option>
+                      <option value="57">+57</option>
+                      <option value="58">+58</option>
+                      <option value="59">+59</option>
+                      <option value="60">+60</option>
+                      <option value="61">+61</option>
+                      <option value="62">+62</option>
+                      <option value="63">+63</option>
+                      <option value="64">+64</option>
+                      <option value="65">+65</option>
+                      <option value="66">+66</option>
+                      <option value="67">+67</option>
+                      <option value="68">+68</option>
+                      <option value="69">+69</option>
+                      <option value="70">+70</option>
+                      <option value="71">+71</option>
+                      <option value="72">+72</option>
+                      <option value="73">+73</option>
+                      <option value="74">+74</option>
+                      <option value="75">+75</option>
+                      <option value="76">+76</option>
+                      <option value="77">+77</option>
+                      <option value="78">+78</option>
+                      <option value="79">+79</option>
+                      <option value="80">+80</option>
+                      <option value="81">+81</option>
+                      <option value="82">+82</option>
+                      <option value="83">+83</option>
+                      <option value="84">+84</option>
+                      <option value="85">+85</option>
+                      <option value="86">+86</option>
+                      <option value="87">+87</option>
+                      <option value="88">+88</option>
+                      <option value="89">+89</option>
+                      <option value="90">+90</option>
+                      <option value="91">+91</option>
+                      <option value="92">+92</option>
+                      <option value="93">+93</option>
+                      <option value="94">+94</option>
+                      <option value="95">+95</option>
+                      <option value="96">+96</option>
+                      <option value="97">+97</option>
+                      <option value="98">+98</option>
+                      <option value="99">+99</option>
+                      <option value="100">+100</option>
+                    </select>
+                    <label for="ddd">DDD</label>
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="form-floating">
+                    <input required='' name="numero-telefone" id="numero-telefone"
+                      class="form-control field field-section-3" inputmode="numeric" maxlength="11" minlength="8"
+                      onkeypress="return event.charCode >= 48 && event.charCode <= 57" type="tel"
+                      placeholder="Celular (12) 34569-0123">
+                    <label for="numero-telefone">Número de telefone (01) 23456-7890</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-floating">
+                <input required='' name="email" id="email" class="form-control field field-section-3" inputmode="email"
+                  type="email" placeholder="Email">
+                <label for="email">E-mail</label>
+              </div>
+
+              <div class="form-floating">
+                <input required='' id="zip" class="form-control field field-section-3" inputmode="numeric" minlength="2"
+                  maxlength="8" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                  placeholder="CEP (apenas números)">
+                <label for="zip">CEP (apenas números)</label>
+              </div>
+
+              <div class="row" style="margin-top: -20px; margin-bottom: -20px;">
+                <div class="col-9">
+                  <div class="form-floating">
+                    <input required='' name="logradouro" id="logradouro" class="form-control field field-section-3"
+                      inputmode="text" minlength="2" type="text" placeholder="Rua">
+                    <label for="logradouro">Rua</label>
+                  </div>
+                </div>
+
+                <div class="col-3">
+                  <div class="form-floating">
+                    <input required='' name="number" id="number" class="form-control field field-section-3"
+                      inputmode="numeric" minlength="1" maxlength="5"
+                      onkeypress="return event.charCode >= 48 && event.charCode <= 57" placeholder="Número">
+                    <label for="number">Número</label>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="row" style="margin-top: -20px; margin-bottom: -20px;">
+                <div class="col-md-4">
+                  <div class="form-floating">
+                    <input required='' name="bairro" id="bairro" class="form-control field field-section-3"
+                      inputmode="text" minlength="2" type="text" placeholder="Bairro">
+                    <label for="bairro">Bairro</label>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="form-floating">
+                    <input required='' name="localidade" id="localidade" class="form-control field field-section-3"
+                      inputmode="text" minlength="2" type="text" placeholder="Cidade">
+                    <label for="localidade">Cidade</label>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="form-floating">
+                    <input required='' name="uf" id="uf" class="form-control field field-section-3" inputmode="text"
+                      minlength="2" type="text" placeholder="Estado">
+                    <label for="uf">Estado</label>
+                  </div>
+                </div>
+
+              </div>
+            </fieldset>
+
+            <h3 class="mt-4 mb-4 title">Em qual bairro fica sua igreja?</h3>
+
+            <fieldset class="w-75 fieldset">
+              <select required="" inputmode="select" class="form-control field field-section-3" name="igreja"
+                id="igreja">
+                <option value="" disabled="" selected>Opções para escolha</option>
+                <option value="sem-igreja">Não frequento</option>
+                <option value="ieq-aguavermelha">IEQ - Água Vermelha</option>
+                <option value="ieq-azulville">IEQ - Azulville</option>
+                <option value="ieq-boavista">IEQ - Boa Vista</option>
+                <option value="ieq-botafogo">IEQ - Botafogo</option>
+                <option value="ieq-cruzeiro">IEQ - Cruzeiro do Sul</option>
+                <option value="ieq-descalvado">IEQ - Descalvado</option>
+                <option value="ieq-ibate">IEQ - Ibaté</option>
+                <option value="ieq-itirapina">IEQ - Itirapina</option>
+                <option value="ieq-tangara">IEQ - Jardim Tangará</option>
+                <option value="ieq-jockeyclub">IEQ - Jockey Club</option>
+                <option value="ieq-planaltoparaiso">IEQ - Planalto Paraiso</option>
+                <option value="ieq-ribeiraobonito">IEQ - Ribeirão Bonito</option>
+                <option value="ieq-santafelicia">IEQ - Santa Felícia</option>
+                <option value="ieq-vilabrasilia">IEQ - Vila Brasília</option>
+                <option value="outra-igreja">Outra</option>
+              </select>
+
+              <div class="form-floating">
+                <input name="outra-igreja" id="outra-igreja" class="form-control field field-section-3 d-none"
+                  inputmode="text" minlength="2"
+                  onkeypress="return (event.charCode >= 65 && event.charCode <= 126) || (event.charCode >= 192 && event.charCode <= 251)"
+                  type="text" placeholder="Insira o nome da sua igreja">
+                <label id="label-outra-igreja" for="outra-igreja" class="d-none">Insira o nome da sua igreja</label>
+              </div>
+
+            </fieldset>
+
+          </div>
+
+          <!-- Forth Section Forms -->
+          <div class="carousel-item" onchange="removeInvalid(id)" id="section-4">
+            <h3 class="title mt-4 mb-4">Você possui alguma alergia ou restrição alimentar?</h3>
+
+            <!-- Options (Yes/No)-->
+            <div class="d-inline">
+              <button type="button" class="btn btn-custom1"
+                onclick="enableComponent('alergias'); enableComponent('label-alergias');enableRequired('alergias');">Sim</button>
+
+              <button type="button" class="btn btn-custom2"
+                onclick="disableComponent('alergias'); disableComponent('label-alergias');disableRequired('alergias');">Não</button>
+            </div>
+
+            <fieldset class="w-75 fieldset">
+              <div class="form-floating">
+                <input name="alergias" id="alergias" class="form-control field field-single field-section-4 d-none"
+                  inputmode="text" minlength="2" type="text" placeholder="Alergias">
+                <label id="label-alergias" for="alergias" class="d-none">Alergias</label>
+              </div>
+            </fieldset>
+
+            <h3 class="title mt-4 mb-4">Realiza o uso contínuo de alguma medicação?</h3>
+
+            <!-- Options (Yes/No)-->
+            <div class="d-inline">
+              <button type="button" class="btn btn-custom1"
+                onclick="enableComponent('remedios'); enableComponent('label-remedios'); enableRequired('remedios');">Sim</button>
+
+              <button type="button" class="btn btn-custom2"
+                onclick="disableComponent('remedios'); disableComponent('label-remedios');disableRequired('remedios'); checkFields('next')">Não</button>
+            </div>
+
+            <fieldset class="w-75 fieldset mb-3">
+              <div class="form-floating">
+                <input name="remedios" id="remedios" class="form-control field field-single field-section-4 d-none"
+                  inputmode="text" minlength="2" type="text" placeholder="Remédios (qual(is) e a quantidade diária)">
+                <label id="label-remedios" for="remedios" class="d-none">Remédios (qual(is) e a quantidade
+                  diária)</label>
+              </div>
+            </fieldset>
+
+          </div>
+
+          <!-- Fifth Section Forms -->
+          <div class="carousel-item" id="section-5">
+            <h3 class="title mt-4 mb-4">Já temos todos os seus dados!</h3>
+
+            <h3 class="title mt-4 mb-4" style="font-size: 1.1em;">Mas fique atento, para prosseguir você precisa
+              concordar com as regras de funcionamento do nosso Acampamento.</h3>
+
+            <figure class="gif">
+              <img src="../images/gif/gif-3.gif" alt="">
+            </figure>
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-custom1 mt-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              Ler todas as regras
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+              aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Regras</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body text-start">
+                    <p class="fw-bold">
+                      1.1. Chácara Recanto das Graúnas I, II, III e IV, Alameda dos Tucanos - Balneário do 29, São
+                      Carlos- SP, 13560-001
+                    </p>
+                    <p class="fw-bold">
+                      2 - Data e horário
+                    </p>
+                    <p>
+                      2.1. Data: XXXXXXXXX à XXXXXXXXX <br>
+                      2.2. Chegada: 15:00 (XX) e saída às 14:00 (XX)
+                    </p>
+                    <p class="fw-bold">
+                      3 - Transporte
+                    </p>
+                    <p>
+                      3.1. Haverá um ônibus para transportar os acampantes no dia XX. Os pontos e horários serão
+                      divulgados pelos líderes e/ou redes sociais. Necessário sinalizar previamente o uso do transporte.
+                      <br>
+                      3.2. O uso deste serviço não é obrigatório, pois os acampantes poderão optar pelo seu próprio
+                      deslocamento.
+                    </p>
+                    <p class="fw-bold">
+                      4 - Valor/ Pagamento
+                    </p>
+                    <p>
+                      4.1. Pagamento via PIX, cartão de crédito em até 12x, cartão de débito, boleto ou depósito em
+                      conta
+                      <br>4.2. Se o pagamento for via PIX, boleto ou depósito em conta será cobrado à vista
+                      <br>4.3. O link para pagamento será enviado para o email e WhatsApp cadastrado durante a inscrição
+                      <br>4.4. Caso o acampante tenha se beneficiado de desconto para irmãos de sangue e por algum
+                      motivo um dos irmãos não tenha efetuado o pagamento, posteriormente, o acampante receberá um link
+                      para pagamento referente à diferença do desconto indevido.
+                      <br>4.5. O prazo para pagamento com desconto de pré-inscrição e/ou irmãos de sangue será até o dia
+                      XXXXX. Após este prazo todos pagarão o valor integral de R$250,00.
+                    </p>
+                    <p class="fw-bold">
+                      5 - Participantes/ itens essenciais
+                    </p>
+                    <p>
+                      5.1. Todos os menores de 18 (dezoito) anos poderão participar com a autorização dos pais,
+                      entregues para os líderes ou enviado por correio para o escritório regional (impresso e assinado)
+                      <br>5.2. Qualquer problema ou dificuldade deverá ser informada a organização
+                      <br>5.3. O evento disponibilizará os colchões para todos, mas caso o participante decida fazer
+                      camping terá que <br>levar a sua barraca e o seu colchão
+                      <br>5.4. Os acampantes deverão levar itens básicos para sua estadia como:
+                    </p>
+                    <p class="fw-bold">
+                      Higiene pessoal:
+                    </p>
+                    <p>
+                      Escova de dente e creme dental
+                      <br>Sabonete e bucha
+                      <br>Shampoo e condicionador
+                      <br>Desodorante e perfume
+                      <br>Absorvente e outros
+                      <br>Toalha de banho
+                      <br>Protetor solar
+                    </p>
+                    <p class="fw-bold">
+                      Alimentação:
+                    </p>
+                    <p>
+                      Caneca
+                      <br>Prato
+                      <br>Talheres
+                    </p>
+                    <p class="fw-bold">
+                      Dormitórios:
+                    </p>
+                    <p>
+                      Travesseiro
+                      <br>Roupa de cama (lençol, tevesseiro, fronha e cobertor)
+                      <br>Pijama
+                    </p>
+                    <p class="fw-bold">
+                      Roupas para piscina:
+                    </p>
+                    <p>
+                      É obrigatório entrar de camiseta e bermuda por cima da roupa de banho
+                      <br>Biquíni/Sunga (por baixo)
+                      <br>Não usar jeans ou roupas com zíper, botões, fivelas, etc.
+                    </p>
+                    <p class="fw-bold">
+                      Não esquecer:
+                    </p>
+                    <p>
+                      Bíblia
+                      <br>Guarda- chuva
+                      <br>Remédios (se necessário)
+                      <br>Papel e caneta para anotações
+                    </p>
+                    <p class="fw-bold">
+                      6 - Alimentação
+                    </p>
+                    <p>
+                      6.1. O acampamento fornecerá as 4 refeições (café da manhã, almoço, café da tarde e jantar)
+                      <br>6.2. Caso o participante queira comer algo a parte (doces, refrigerante...) haverá uma cantina
+                      disponível
+                    </p>
+                    <p class="fw-bold">
+                      7 - Programação
+                    </p>
+                    <p>
+                      7.1. A programação estará fixada nos murais informados no primeiro dia de acampamento
+                    </p>
+                    <p class="fw-bold">
+                      8 - Dormitórios
+                    </p>
+                    <p>
+                      8.1. É obrigatório que o acampante mantenha organizado os dormitórios, mantendo o local
+                      higienizado
+                      <br>8.2. Os participantes dividirão quarto com outras pessoas
+                      <br>8.3. O acampante deverá ficar atento aos horário das programações, refeições, toque de
+                      recolher e despertar
+                      <br>8.4. Será proibido ao participante entrar no dormitório do sexo biológico oposto
+                    </p>
+                    <p class="fw-bold">
+                      9 - Camping
+                    </p>
+                    <p>
+                      9.1. Caso o acampante opte por dormir em barraca de camping (de sua propriedade), este deverá
+                      levar além dos itens contidos no parágrafo 5.4 o colchão para inserir em sua barraca
+                      <br>9.2. Todas as obrigações dispostas nos parágrafos 8.1 e 8.4 também se aplicam aos acampantes
+                      que optarem por barracas
+                      <br>9.3. A organizão não fornece barraca e/ou colchão para o optante dessa modalidade
+                    </p>
+                    <p class="fw-bold">
+                      10 - Regras de boa convivência
+                    </p>
+                    <p>
+                      10.1.Não será permitido:
+                      <br>10.1.1 - Levar ou fazer uso de bebidas alcoólicas, cigarros (mesmo os eletrônicos), narguile,
+                      drogas, jogos de azar (baralho e seus similares), bombas e/ou elementos pirotécnicos (fogos de
+                      qualquer tipo).
+                      <br>10.1.2 - Levar ou fazer uso de armas de fogo, armas brancas (faca, canivete, punhal,
+                      soco-inglês e todos os similares)
+                      <br>10.1.3 - Beijar e/ou namorar qualquer participante, mesmo que sejam casais
+                      <br>10.1.4 - Sair do local alojamento após o horário estabelecido para o descanso ou das
+                      dependências do Acampamento sem autorização de um lider ou organizadores
+                      <br>10.1.5 - Fazer uso de medicamentos não mencionados durante a inscrição
+                      <br>10.1.6 - Negar-se a obedecer os horários e atividades previstas no cronograma a ser fixado
+                      <br>10.1.7 - Brincar em volta da piscina ou promover brincadeiras com potencial de ferimento
+                      <br>10.1.8 - Qualquer tipo de discriminação ou apelidos e brincadeiras pejorativas, bem como
+                      palavras de baixo calão
+                      <br>10.1.9 - Utilizar fones de ouvido durante as atividades e ministrações
+                      <br>10.1.10 - Fazer uso de óculos escuros durante as ministrações
+                      <br>10.2. Responsabilidades do acampante
+                      <br>10.2.1 - A organização do evento não será responsável por qualquer dano ou perda de itens
+                      pessoais, sendo obrigação do participante zelar por seus pertences.
+                      <br>10.2.2 - A participação quanto às programações serão obrigatórias.
+                    </p>
+                    <p class="fw-bold">
+                      O não cumprimento de qualquer item do tópico 10 poderá ocasionar o cancelamento da inscrição sem
+                      direito a ressarcimento!
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <span>Você concorda com todas as regras pré-estabelecidas acima?</span>
+                    <button type="button" class="btn btn-custom2" data-bs-dismiss="modal">Não</button>
+                    <button type="button" class="btn btn-custom1" data-bs-dismiss="modal"
+                      onclick="enableComponent('registrationConfirmation')">Sim</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="registrationConfirmation" class="d-none">
+              <h3 class="title mt-4 mb-2">Deseja confirmar sua inscrição?</h3>
+
+              <a href="payment.html">
+                <button type="button" id="submitButton" class="btn btn-custom1 bg-success">Sim</button>
+              </a>
+              
+            </div>
+
           </div>
 
         </div>
 
-      </form>
+        <!--Carousel Controls-->
+        <div class="text-center mb-3">
+          <button id="carousel-control-prev" class="btn btn-secondary d-none" type="button"
+            onclick="checkFields('prev')" style="margin-right: 15px;">Anterior</button>
+
+          <button id="carousel-control-next" class="btn btn-success" type="button"
+            onclick="checkFields('next')">Próximo</button>
+        </div>
+
+      </div>
+
     </div>
   </div>
-   
+
   <script src="../script/script-subscription.js"></script>
-  </body>
+</body>
+
 </html>

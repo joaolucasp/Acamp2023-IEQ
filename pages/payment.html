@@ -76,5 +76,35 @@
   </div>
    
   <script src="../script/script-subscription.js"></script>
+
+  <script>
+    var data_set = JSON.parse(localStorage.getItem('registered'));
+
+    var camping_person = {
+      'nome': data_set[0],
+      'sobrenome': data_set[1],
+      'apelido': data_set[2],
+      'data_nascimento': data_set[3],
+      'nome_acompanhante': data_set[4],
+      'rg': data_set[5],
+      'cpf': data_set[6],
+      'nome_responsavel': data_set[7],
+      'rg_responsavel': data_set[8],
+      'ddd': data_set[9],
+      'numero_telefone': data_set[10],
+      'email': data_set[11],
+      'zip': data_set[12],
+      'logradouro': data_set[13],
+      'number': data_set[14],
+      'bairro': data_set[15],
+      'localidade': data_set[16],
+      'uf': data_set[17],
+      'igreja': data_set[18],
+      'outra_igreja': data_set[19],
+      'alergias': data_set[20],
+      'remedios': data_set[21]
+    }
+  </script>
+
   </body>
 </html>

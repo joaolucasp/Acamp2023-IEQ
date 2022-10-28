@@ -231,7 +231,6 @@ function calculateAge(birth, today){
 /*-----------------------------------------------------------------------*/
 
 /*Instance of the subscribed object (performed only after confirmation of the subscription)*/
-var camping_person;
 const submit_button = document.querySelector("#submitButton");
 
 submit_button.addEventListener("click", event => {
@@ -242,32 +241,6 @@ submit_button.addEventListener("click", event => {
         data_set.push(current_field.value);
     })
 
-    camping_person = new Inscrito(data_set);
-    console.log(camping_person)
+    localStorage.setItem('registered', JSON.stringify(data_set));
 })
-
-function Inscrito(data_set){
-    this.nome = data_set[0];
-    this.sobrenome = data_set[1];
-    this.apelido = data_set[2];
-    this.data_nascimento = data_set[3];
-    this.nome_acompanhante = data_set[4];
-    this.rg = data_set[5];
-    this.cpf = data_set[6];
-    this.nome_responsavel = data_set[7];
-    this.rg_responsavel = data_set[8];
-    this.ddd = data_set[9];
-    this.numero_telefone = data_set[10];
-    this.email = data_set[11];
-    this.zip = data_set[12];
-    this.logradouro = data_set[13];
-    this.number = data_set[14];
-    this.bairro = data_set[15];
-    this.localidade = data_set[16];
-    this.uf = data_set[17];
-    this.igreja = data_set[18]
-    this.outra_igreja = data_set[19];
-    this.alergias = data_set[20];
-    this.remedios = data_set[21];
-}
 /*-----------------------*/
