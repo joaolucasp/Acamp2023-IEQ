@@ -23,7 +23,7 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <![endif]-->
 
-    <script src="../components/cep/js/main.js"></script>
+    <!-- <script src="../components/cep/js/main.js"></script> -->
 
     <title>Pagamento Acampamento 2023</title>
      
@@ -77,10 +77,10 @@
    
   <script src="../script/script-subscription.js"></script>
 
-  <script>
-    var data_set = JSON.parse(localStorage.getItem('registered'));
+<script>
+  var data_set = JSON.parse(localStorage.getItem('registered'));
 
-    var camping_person = {
+  var camping_person = {
       'nome': data_set[0],
       'sobrenome': data_set[1],
       'apelido': data_set[2],
@@ -103,8 +103,12 @@
       'outra_igreja': data_set[19],
       'alergias': data_set[20],
       'remedios': data_set[21]
-    }
-  </script>
+  }
+
+  camping_person.apelido ? null :camping_person.apelido = camping_person.nome
+  
+  document.querySelector('.title').innerHTML = `${camping_person.apelido} dados registrados, para concluir sua inscrição efetue o pagamento!`
+</script>
 
   </body>
 </html>

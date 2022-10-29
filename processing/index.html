@@ -5,8 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Processando</title>
+
+    <!-- Bootstrap CSS & JS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="../stylesheet/style.css" type="text/css">
+    
 </head>
 <body>
-    <h1>Seu pagamento está sendo processado</h1>
+    <div class="container mt-lg-4">
+        <h1 class="tt">Seu pagamento está sendo processado</h1>
+        <p class="txt">Após a confirmação de seu pagamento, enviaremos sua inscrição para o <em>Acampamento Deeper 2023</em> para o email cadastado ok!</p>
+        <br>
+        <p class="txt"><em>Um abraço e até lá - Ton</em></p>
+    
+    </div>
 </body>
+
+<script>
+    var data_set = JSON.parse(localStorage.getItem('registered'));
+
+    var camping_person = {
+        'nome': data_set[0],
+        'sobrenome': data_set[1],
+        'apelido': data_set[2],
+        'data_nascimento': data_set[3],
+        'nome_acompanhante': data_set[4],
+        'rg': data_set[5],
+        'cpf': data_set[6],
+        'nome_responsavel': data_set[7],
+        'rg_responsavel': data_set[8],
+        'ddd': data_set[9],
+        'numero_telefone': data_set[10],
+        'email': data_set[11],
+        'zip': data_set[12],
+        'logradouro': data_set[13],
+        'number': data_set[14],
+        'bairro': data_set[15],
+        'localidade': data_set[16],
+        'uf': data_set[17],
+        'igreja': data_set[18],
+        'outra_igreja': data_set[19],
+        'alergias': data_set[20],
+        'remedios': data_set[21]
+    }
+
+    camping_person.apelido ? null :camping_person.apelido = camping_person.nome
+
+    document.querySelector('.tt').innerHTML = `😃 ${camping_person.apelido}, seu pagamento está sendo processado`
+
+</script>
 </html>

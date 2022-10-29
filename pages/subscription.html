@@ -129,7 +129,7 @@
               </div>
 
               <div class="form-floating">
-                <input required='' name="apelido" id="apelido" class="form-control field field-section-1"
+                <input name="apelido" id="apelido" class="form-control field field-section-1"
                   inputmode="text" minlength="2"
                   onkeypress="return (event.charCode == 32) || (event.charCode >= 65 && event.charCode <= 126) || (event.charCode >= 192 && event.charCode <= 251)"
                   type="text" placeholder="Apelido">
@@ -144,7 +144,7 @@
 
             </fieldset>
 
-            <h4 class="d-inline title-secundary">Possui irmão acompanhante?</h4>
+            <h4 class="d-inline title-secundary">Possui irmão acampante?</h4>
             <div class="d-inline">
               <button type="button" id="sim-acompanhante" class="btn btn-custom1"
                 onclick="enableComponent('nome-acompanhante'); disableComponent(id); enableRequired('nome-acompanhante'); enableComponent('label-acompanhante');">Sim</button>
@@ -156,8 +156,7 @@
             <fieldset class="w-75 fieldset">
               <div class="form-floating">
                 <input name="nome-acompanhante" id="nome-acompanhante" class="form-control field field-section-1 d-none"
-                  inputmode="text" minlength="2"
-                  onkeypress="return (event.charCode == 32) || (event.charCode >= 65 && event.charCode <= 126) || (event.charCode >= 192 && event.charCode <= 251)"
+                  inputmode="text" minlength="2" 
                   type="text" placeholder="Qual o nome completo do seu irmão?">
                 <label id="label-acompanhante" for="nome-acompanhante" class="d-none">Nome do irmão acompanhante</label>
               </div>
@@ -212,97 +211,96 @@
                   <div class="form-floating">
                     <select required="" inputmode="select" class="form-control field field-section-3" name="ddd"
                       id="ddd">
-                      <option value="" disabled selected class="text-center">(+XX)</option>
-                      <option value="11">+11</option>
-                      <option value="12">+12</option>
-                      <option value="13">+13</option>
-                      <option value="14">+14</option>
-                      <option value="15">+15</option>
-                      <option value="16">+16</option>
-                      <option value="17">+17</option>
-                      <option value="18">+18</option>
-                      <option value="19">+19</option>
-                      <option value="20">+20</option>
-                      <option value="21">+21</option>
-                      <option value="22">+22</option>
-                      <option value="23">+23</option>
-                      <option value="24">+24</option>
-                      <option value="25">+25</option>
-                      <option value="26">+26</option>
-                      <option value="27">+27</option>
-                      <option value="28">+28</option>
-                      <option value="29">+29</option>
-                      <option value="30">+30</option>
-                      <option value="31">+31</option>
-                      <option value="32">+32</option>
-                      <option value="33">+33</option>
-                      <option value="34">+34</option>
-                      <option value="35">+35</option>
-                      <option value="36">+36</option>
-                      <option value="37">+37</option>
-                      <option value="38">+38</option>
-                      <option value="39">+39</option>
-                      <option value="40">+40</option>
-                      <option value="41">+41</option>
-                      <option value="42">+42</option>
-                      <option value="43">+43</option>
-                      <option value="44">+44</option>
-                      <option value="45">+45</option>
-                      <option value="46">+46</option>
-                      <option value="47">+47</option>
-                      <option value="48">+48</option>
-                      <option value="49">+49</option>
-                      <option value="50">+50</option>
-                      <option value="51">+51</option>
-                      <option value="52">+52</option>
-                      <option value="53">+53</option>
-                      <option value="54">+54</option>
-                      <option value="55">+55</option>
-                      <option value="56">+56</option>
-                      <option value="57">+57</option>
-                      <option value="58">+58</option>
-                      <option value="59">+59</option>
-                      <option value="60">+60</option>
-                      <option value="61">+61</option>
-                      <option value="62">+62</option>
-                      <option value="63">+63</option>
-                      <option value="64">+64</option>
-                      <option value="65">+65</option>
-                      <option value="66">+66</option>
-                      <option value="67">+67</option>
-                      <option value="68">+68</option>
-                      <option value="69">+69</option>
-                      <option value="70">+70</option>
-                      <option value="71">+71</option>
-                      <option value="72">+72</option>
-                      <option value="73">+73</option>
-                      <option value="74">+74</option>
-                      <option value="75">+75</option>
-                      <option value="76">+76</option>
-                      <option value="77">+77</option>
-                      <option value="78">+78</option>
-                      <option value="79">+79</option>
-                      <option value="80">+80</option>
-                      <option value="81">+81</option>
-                      <option value="82">+82</option>
-                      <option value="83">+83</option>
-                      <option value="84">+84</option>
-                      <option value="85">+85</option>
-                      <option value="86">+86</option>
-                      <option value="87">+87</option>
-                      <option value="88">+88</option>
-                      <option value="89">+89</option>
-                      <option value="90">+90</option>
-                      <option value="91">+91</option>
-                      <option value="92">+92</option>
-                      <option value="93">+93</option>
-                      <option value="94">+94</option>
-                      <option value="95">+95</option>
-                      <option value="96">+96</option>
-                      <option value="97">+97</option>
-                      <option value="98">+98</option>
-                      <option value="99">+99</option>
-                      <option value="100">+100</option>
+                      <option value="" disabled selected class="text-center">(XX)</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                      <option value="13">13</option>
+                      <option value="14">14</option>
+                      <option value="15">15</option>
+                      <option value="16">16</option>
+                      <option value="17">17</option>
+                      <option value="18">18</option>
+                      <option value="19">19</option>
+                      <option value="20">20</option>
+                      <option value="21">21</option>
+                      <option value="22">22</option>
+                      <option value="23">23</option>
+                      <option value="24">24</option>
+                      <option value="25">25</option>
+                      <option value="26">26</option>
+                      <option value="27">27</option>
+                      <option value="28">28</option>
+                      <option value="29">29</option>
+                      <option value="30">30</option>
+                      <option value="31">31</option>
+                      <option value="32">32</option>
+                      <option value="33">33</option>
+                      <option value="34">34</option>
+                      <option value="35">35</option>
+                      <option value="36">36</option>
+                      <option value="37">37</option>
+                      <option value="38">38</option>
+                      <option value="39">39</option>
+                      <option value="40">40</option>
+                      <option value="41">41</option>
+                      <option value="42">42</option>
+                      <option value="43">43</option>
+                      <option value="44">44</option>
+                      <option value="45">45</option>
+                      <option value="46">46</option>
+                      <option value="47">47</option>
+                      <option value="48">48</option>
+                      <option value="49">49</option>
+                      <option value="50">50</option>
+                      <option value="51">51</option>
+                      <option value="52">52</option>
+                      <option value="53">53</option>
+                      <option value="54">54</option>
+                      <option value="55">55</option>
+                      <option value="56">56</option>
+                      <option value="57">57</option>
+                      <option value="58">58</option>
+                      <option value="59">59</option>
+                      <option value="60">60</option>
+                      <option value="61">61</option>
+                      <option value="62">62</option>
+                      <option value="63">63</option>
+                      <option value="64">64</option>
+                      <option value="65">65</option>
+                      <option value="66">66</option>
+                      <option value="67">67</option>
+                      <option value="68">68</option>
+                      <option value="69">69</option>
+                      <option value="70">70</option>
+                      <option value="71">71</option>
+                      <option value="72">72</option>
+                      <option value="73">73</option>
+                      <option value="74">74</option>
+                      <option value="75">75</option>
+                      <option value="76">76</option>
+                      <option value="77">77</option>
+                      <option value="78">78</option>
+                      <option value="79">79</option>
+                      <option value="80">80</option>
+                      <option value="81">81</option>
+                      <option value="82">82</option>
+                      <option value="83">83</option>
+                      <option value="84">84</option>
+                      <option value="85">85</option>
+                      <option value="86">86</option>
+                      <option value="87">87</option>
+                      <option value="88">88</option>
+                      <option value="89">89</option>
+                      <option value="90">90</option>
+                      <option value="91">91</option>
+                      <option value="92">92</option>
+                      <option value="93">93</option>
+                      <option value="94">94</option>
+                      <option value="95">95</option>
+                      <option value="96">96</option>
+                      <option value="97">97</option>
+                      <option value="98">98</option>
+                      <option value="99">99</option>
                     </select>
                     <label for="ddd">DDD</label>
                   </div>
@@ -312,8 +310,8 @@
                     <input required='' name="numero-telefone" id="numero-telefone"
                       class="form-control field field-section-3" inputmode="numeric" maxlength="9" minlength="8"
                       onkeypress="return event.charCode >= 48 && event.charCode <= 57" type="tel"
-                      placeholder="Celular (12) 34569-0123">
-                    <label for="numero-telefone">Telefone (Sem DDD) </label>
+                      placeholder="Celular 34569-0123">
+                    <label for="numero-telefone">WhatsApp (Sem DDD) </label>
                   </div>
                 </div>
               </div>
@@ -484,7 +482,8 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body text-start">
-                    <p class="fw-bold">
+                    <p class="fw-bold">Local</p>
+                    <p>
                       1.1. Chácara Recanto das Graúnas I, II, III e IV, Alameda dos Tucanos - Balneário do 29, São
                       Carlos- SP, 13560-001
                     </p>
@@ -492,14 +491,15 @@
                       2 - Data e horário
                     </p>
                     <p>
-                      2.1. Data: XXXXXXXXX à XXXXXXXXX <br>
-                      2.2. Chegada: 15:00 (XX) e saída às 14:00 (XX)
+                      2.1. Data: 18/02/2022 à 21/02/2023
+                    <br>
+                      2.2. Chegada: 15:00h e saída às 14:00h
                     </p>
                     <p class="fw-bold">
                       3 - Transporte
                     </p>
                     <p>
-                      3.1. Haverá um ônibus para transportar os acampantes no dia XX. Os pontos e horários serão
+                      3.1. Haverá um ônibus para transportar os acampantes no dia 18. Os pontos e horários serão
                       divulgados pelos líderes e/ou redes sociais. Necessário sinalizar previamente o uso do transporte.
                       <br>
                       3.2. O uso deste serviço não é obrigatório, pois os acampantes poderão optar pelo seu próprio
@@ -516,8 +516,7 @@
                       <br>4.4. Caso o acampante tenha se beneficiado de desconto para irmãos de sangue e por algum
                       motivo um dos irmãos não tenha efetuado o pagamento, posteriormente, o acampante receberá um link
                       para pagamento referente à diferença do desconto indevido.
-                      <br>4.5. O prazo para pagamento com desconto de pré-inscrição e/ou irmãos de sangue será até o dia
-                      XXXXX. Após este prazo todos pagarão o valor integral de R$250,00.
+                      <br>4.5. Desistência com ressarcimento serão atendidos somente até o dia 01/01/2023. Caso haja solicitações de desistência após essa data, não serão devolvidos os valores já pagos de inscrições.
                     </p>
                     <p class="fw-bold">
                       5 - Participantes/ itens essenciais
@@ -555,7 +554,7 @@
                     </p>
                     <p>
                       Travesseiro
-                      <br>Roupa de cama (lençol, tevesseiro, fronha e cobertor)
+                      <br>Roupa de cama (lençol, travesseiro, fronha e cobertor)
                       <br>Pijama
                     </p>
                     <p class="fw-bold">
@@ -580,7 +579,7 @@
                     </p>
                     <p>
                       6.1. O acampamento fornecerá as 4 refeições (café da manhã, almoço, café da tarde e jantar)
-                      <br>6.2. Caso o participante queira comer algo a parte (doces, refrigerante...) haverá uma cantina
+                      <br>6.2. Caso o participante queira comer algo à parte (doces, refrigerante...) haverá uma cantina
                       disponível
                     </p>
                     <p class="fw-bold">
@@ -599,6 +598,7 @@
                       <br>8.3. O acampante deverá ficar atento aos horário das programações, refeições, toque de
                       recolher e despertar
                       <br>8.4. Será proibido ao participante entrar no dormitório do sexo biológico oposto
+                      <br>8.5. Os quartos não serão separados por igreja, portanto poderá haver mesclas de igrejas no mesmo ambiente.
                     </p>
                     <p class="fw-bold">
                       9 - Camping
@@ -606,9 +606,9 @@
                     <p>
                       9.1. Caso o acampante opte por dormir em barraca de camping (de sua propriedade), este deverá
                       levar além dos itens contidos no parágrafo 5.4 o colchão para inserir em sua barraca
-                      <br>9.2. Todas as obrigações dispostas nos parágrafos 8.1 e 8.4 também se aplicam aos acampantes
+                      <br>9.2. Todas as obrigações dispostas nos parágrafos 8.1 e 8.5 também se aplicam aos acampantes
                       que optarem por barracas
-                      <br>9.3. A organizão não fornece barraca e/ou colchão para o optante dessa modalidade
+                      <br>9.3. A organização não fornece barraca e/ou colchão para o optante dessa modalidade
                     </p>
                     <p class="fw-bold">
                       10 - Regras de boa convivência
@@ -622,7 +622,7 @@
                       soco-inglês e todos os similares)
                       <br>10.1.3 - Beijar e/ou namorar qualquer participante, mesmo que sejam casais
                       <br>10.1.4 - Sair do local alojamento após o horário estabelecido para o descanso ou das
-                      dependências do Acampamento sem autorização de um lider ou organizadores
+                      dependências do Acampamento sem autorização de um líder ou organizadores
                       <br>10.1.5 - Fazer uso de medicamentos não mencionados durante a inscrição
                       <br>10.1.6 - Negar-se a obedecer os horários e atividades previstas no cronograma a ser fixado
                       <br>10.1.7 - Brincar em volta da piscina ou promover brincadeiras com potencial de ferimento
@@ -630,16 +630,19 @@
                       palavras de baixo calão
                       <br>10.1.9 - Utilizar fones de ouvido durante as atividades e ministrações
                       <br>10.1.10 - Fazer uso de óculos escuros durante as ministrações
+                      <br>10.1.11 - Em caso de descumprimento dos itens citados acima, o acampante será convidado a se retirar, e seus responsáveis informados sobre o ocorrido
                       <br>10.2. Responsabilidades do acampante
                       <br>10.2.1 - A organização do evento não será responsável por qualquer dano ou perda de itens
                       pessoais, sendo obrigação do participante zelar por seus pertences.
                       <br>10.2.2 - A participação quanto às programações serão obrigatórias.
                     </p>
-                    <p class="fw-bold">
+                    <p class="fw-bold"  style="font-size: 1.2em;">
+                      Você se compromete a comprimir todos os itens citados acima?
                       O não cumprimento de qualquer item do tópico 10 poderá ocasionar o cancelamento da inscrição sem
                       direito a ressarcimento!
                     </p>
                   </div>
+
                   <div class="modal-footer">
                     <span>Você concorda com todas as regras pré-estabelecidas acima?</span>
                     <button type="button" class="btn btn-custom2" data-bs-dismiss="modal">Não</button>

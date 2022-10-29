@@ -28,6 +28,12 @@ body {
     width: 35%;
 }
 
+.fw-bold {
+    font-weight: bolder !important;
+    font-size: 1.3em;
+    color: #2E6198;
+}
+
 .divider {
     width: 20px;
     height: 80%;
