@@ -115,7 +115,7 @@
               <div class="form-floating">
                 <input required='' name="nome" id="nome" class="form-control field field-section-1" inputmode="text"
                   minlength="2"
-                  onkeypress="return (event.charCode >= 65 && event.charCode <= 126) || (event.charCode >= 192 && event.charCode <= 251)"
+                  onkeypress="return (event.charCode == 32) || (event.charCode >= 65 && event.charCode <= 126) || (event.charCode >= 192 && event.charCode <= 251)"
                   type="text" placeholder="Nome">
                 <label for="nome">Nome</label>
               </div>
@@ -123,7 +123,7 @@
               <div class="form-floating">
                 <input required='' name="sobrenome" id="sobrenome" class="form-control field field-section-1"
                   inputmode="text" minlength="2"
-                  onkeypress="return (event.charCode >= 65 && event.charCode <= 126) || (event.charCode >= 192 && event.charCode <= 251)"
+                  onkeypress="return (event.charCode == 32) || (event.charCode >= 65 && event.charCode <= 126) || (event.charCode >= 192 && event.charCode <= 251)"
                   type="text" placeholder="Sobrenome">
                 <label for="sobrenome">Sobrenome</label>
               </div>
@@ -131,7 +131,7 @@
               <div class="form-floating">
                 <input required='' name="apelido" id="apelido" class="form-control field field-section-1"
                   inputmode="text" minlength="2"
-                  onkeypress="return (event.charCode >= 65 && event.charCode <= 126) || (event.charCode >= 192 && event.charCode <= 251)"
+                  onkeypress="return (event.charCode == 32) || (event.charCode >= 65 && event.charCode <= 126) || (event.charCode >= 192 && event.charCode <= 251)"
                   type="text" placeholder="Apelido">
                 <label for="apelido">Apelido</label>
               </div>
@@ -157,7 +157,7 @@
               <div class="form-floating">
                 <input name="nome-acompanhante" id="nome-acompanhante" class="form-control field field-section-1 d-none"
                   inputmode="text" minlength="2"
-                  onkeypress="return (event.charCode >= 65 && event.charCode <= 126) || (event.charCode >= 192 && event.charCode <= 251)"
+                  onkeypress="return (event.charCode == 32) || (event.charCode >= 65 && event.charCode <= 126) || (event.charCode >= 192 && event.charCode <= 251)"
                   type="text" placeholder="Qual o nome completo do seu irmão?">
                 <label id="label-acompanhante" for="nome-acompanhante" class="d-none">Nome do irmão acompanhante</label>
               </div>
@@ -186,7 +186,7 @@
               <div class="form-floating">
                 <input name="nome-responsavel" id="nome-responsavel" class="form-control field field-section-2 d-none"
                   inputmode="text" minlength="2"
-                  onkeypress="return (event.charCode >= 65 && event.charCode <= 126) || (event.charCode >= 192 && event.charCode <= 251)"
+                  onkeypress="return (event.charCode == 32) || (event.charCode >= 65 && event.charCode <= 126) || (event.charCode >= 192 && event.charCode <= 251)"
                   type="text" placeholder="Nome completo do responsável">
                 <label id="label-nome-responsavel" for="nome-responsavel" class="d-none">Nome do responsável</label>
               </div>
@@ -406,7 +406,7 @@
               <div class="form-floating">
                 <input name="outra-igreja" id="outra-igreja" class="form-control field field-section-3 d-none"
                   inputmode="text" minlength="2"
-                  onkeypress="return (event.charCode >= 65 && event.charCode <= 126) || (event.charCode >= 192 && event.charCode <= 251)"
+                  onkeypress="return (event.charCode == 32) ||  (event.charCode >= 65 && event.charCode <= 126) || (event.charCode >= 192 && event.charCode <= 251)"
                   type="text" placeholder="Insira o nome da sua igreja">
                 <label id="label-outra-igreja" for="outra-igreja" class="d-none">Insira o nome da sua igreja</label>
               </div>
