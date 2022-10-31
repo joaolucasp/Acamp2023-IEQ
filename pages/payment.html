@@ -2,21 +2,34 @@
 <html lang="pt-br">
   <head>
     <!-- Meta tags Obrigatórias -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- Bootstrap CSS & JS-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Style CSS -->
-    <link rel="stylesheet" href="../stylesheet/style-subscription.css" type="text/css">
+    <link
+      rel="stylesheet"
+      href="../stylesheet/style-subscription.css"
+      type="text/css"
+    />
 
     <!-- Font Awesome Icons -->
-    <script src="https://kit.fontawesome.com/eac825cd8d.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/eac825cd8d.js"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- Shortcut Icon -->
-    <link rel="shortcut icon" href="../images/logoPRETO.png" type="image/png">
+    <link rel="shortcut icon" href="../images/logoPRETO.png" type="image/png" />
 
     <!-- HTML5Shiv -->
     <!--[if lt IE 9]>
@@ -28,96 +41,103 @@
     <title>Pagamento Acampamento 2023</title>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
-     
   </head>
   <body>
-  <!-- Header -->
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 d-flex header w-50 mt-4">
-        <img class="img-fluid logo mt-1 align-self-center" src="../images/logo.png" alt="Imagem logo regional de jovens região 513">
-        <img class="img-fluid divider mt-2 align-self-center" src="../images/components/pipe-noborder-white.png" alt="">
+    <!-- Header -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 d-flex header w-50 mt-4">
+          <img
+            class="img-fluid logo mt-1 align-self-center"
+            src="../images/logo.png"
+            alt="Imagem logo regional de jovens região 513"
+          />
+          <img
+            class="img-fluid divider mt-2 align-self-center"
+            src="../images/components/pipe-noborder-white.png"
+            alt=""
+          />
 
-        <!-- Region and Church Information -->
-        <div class="flex-column name-content mt-3 ml-0 align-self-center">
-          <h2>
-            Quadrangular São Carlos
-          </h2>
-          <h2>
-            Região 513
-          </h2>
+          <!-- Region and Church Information -->
+          <div class="flex-column name-content mt-3 ml-0 align-self-center">
+            <h2>Quadrangular São Carlos</h2>
+            <h2>Região 513</h2>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="container box text-center">
-     <!-- Information Payment -->
-     <div id="paymentInformation" class="pt-1" style="margin-top: 50px;">
-      <h3 class="title mt-4 mb-2">
-        Dados registrados, para concluir sua inscrição efetue o pagamento! 
-      </h3>
+    <div class="container box text-center">
+      <!-- Information Payment -->
+      <div id="paymentInformation" class="pt-1" style="margin-top: 50px">
+        <h3 class="title mt-4 mb-2">
+          , Dados registrados, para concluir sua inscrição efetue o pagamento!
+        </h3>
 
-      <div id="description" class="mb-6">
+        <div id="description" class="mb-6">
+          <script
+            src="https://www.mercadopago.com.br/integrations/v1/web-payment-checkout.js"
+            data-preference-id="97170897-4084ae83-43ce-488d-bbf8-d8778bf9167c"
+            data-source="button"
+          ></script>
+        </div>
 
-        <script src="https://www.mercadopago.com.br/integrations/v1/web-payment-checkout.js"
-          data-preference-id="97170897-4084ae83-43ce-488d-bbf8-d8778bf9167c" data-source="button">
-        </script>
-
-      </div>
-
-      <div id="linkPayment" class="d-none mt-2">
-        <a href="" class="btn btn-custom1 bg-success">Link para pagamento</a>
-        <figure class="gif mt-3">
-          <img src="../images/gif/gif-2.gif" alt="">
-        </figure>
+        <div id="linkPayment" class="d-none mt-2">
+          <a href="" class="btn btn-custom1 bg-success">Link para pagamento</a>
+          <figure class="gif mt-3">
+            <img src="../images/gif/gif-2.gif" alt="" />
+          </figure>
+        </div>
       </div>
     </div>
 
-  </div>
-   
-  <script src="../script/script-subscription.js"></script>
+    <script src="../script/script-subscription.js"></script>
 
-  <script>
-    alert('ATENÇÃO\nAo realizar o pagamento, utilize o mesmo e-mail do responsável pagante')
-    var data_set = JSON.parse(localStorage.getItem('registered'));
+    <script>
+      alert(
+        "ATENÇÃO\nAo realizar o pagamento, utilize o mesmo e-mail do responsável pagante"
+      );
+      var data_set = JSON.parse(localStorage.getItem("registered"));
 
-    var camping_person = {
-        'nome': data_set[0],
-        'sobrenome': data_set[1],
-        'apelido': data_set[2],
-        'data_nascimento': data_set[3],
-        'nome_acompanhante': data_set[4],
-        'rg': data_set[5],
-        'cpf': data_set[6],
-        'nome_responsavel': data_set[7],
-        'rg_responsavel': data_set[8],
-        'ddd': data_set[9],
-        'numero_telefone': data_set[10],
-        'email': data_set[11],
-        'zip': data_set[12],
-        'logradouro': data_set[13],
-        'number': data_set[14],
-        'bairro': data_set[15],
-        'localidade': data_set[16],
-        'uf': data_set[17],
-        'igreja': data_set[18],
-        'outra_igreja': data_set[19],
-        'alergias': data_set[20],
-        'remedios': data_set[21]
-    }
+      var camping_person = {
+        nome: data_set[0],
+        sobrenome: data_set[1],
+        apelido: data_set[2],
+        data_nascimento: data_set[3],
+        nome_acompanhante: data_set[4],
+        rg: data_set[5],
+        cpf: data_set[6],
+        nome_responsavel: data_set[7],
+        rg_responsavel: data_set[8],
+        ddd: data_set[9],
+        numero_telefone: data_set[10],
+        email: data_set[11],
+        zip: data_set[12],
+        logradouro: data_set[13],
+        number: data_set[14],
+        bairro: data_set[15],
+        localidade: data_set[16],
+        uf: data_set[17],
+        igreja: data_set[18],
+        outra_igreja: data_set[19],
+        alergias: data_set[20],
+        remedios: data_set[21],
+      };
 
-    camping_person.apelido ? null :camping_person.apelido = camping_person.nome
-    
-    document.querySelector('.title').innerHTML = `${camping_person.apelido}, dados registrados, para concluir sua inscrição efetue o pagamento!`
-  </script>
+      camping_person.apelido
+        ? null
+        : (camping_person.apelido = camping_person.nome);
 
-  <script>
-    let url = `https://docs.google.com/forms/d/e/1FAIpQLSehSkWUaQvZkfOrVsVcTUPlxPNpBC7-fHJbjteUab7vdEpfgQ/formResponse?entry.48324874=${camping_person.nome}&entry.629868263=${camping_person.sobrenome}&entry.1034895676=${camping_person.apelido}&entry.1940460283=${camping_person.data_nascimento}&entry.1161803427=${camping_person.nome_acompanhante}&entry.2058262346=${camping_person.rg}&entry.1885451675=${camping_person.cpf}&entry.578135239=${camping_person.nome_responsavel}&entry.1696175582=${camping_person.rg_responsavel}&entry.1607304985=${camping_person.ddd}&entry.178624303=${camping_person.numero_telefone}&entry.2024722747=${camping_person.email}&entry.2037355570=${camping_person.zip}&entry.369969493=${camping_person.logradouro}&entry.1459898446=${camping_person.number}&entry.1878625591=${camping_person.bairro}&entry.524296923=${camping_person.localidade}&entry.1310221270=${camping_person.uf}&entry.705938882=${camping_person.igreja}&entry.767284581=${camping_person.outra_igreja}&entry.2032939010=${camping_person.alergias}&entry.1544227927=${camping_person.remedios}`
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", url, false);
-    xhttp.send();
-  </script>
+      document.querySelector(
+        ".title"
+      ).innerHTML = `${camping_person.apelido}, dados registrados, para concluir sua inscrição efetue o pagamento!`;
+    </script>
 
+    <script>
+      let url = `https://docs.google.com/forms/d/e/1FAIpQLSehSkWUaQvZkfOrVsVcTUPlxPNpBC7-fHJbjteUab7vdEpfgQ/formResponse?entry.48324874=${camping_person.nome}&entry.629868263=${camping_person.sobrenome}&entry.1034895676=${camping_person.apelido}&entry.1940460283=${camping_person.data_nascimento}&entry.1161803427=${camping_person.nome_acompanhante}&entry.2058262346=${camping_person.rg}&entry.1885451675=${camping_person.cpf}&entry.578135239=${camping_person.nome_responsavel}&entry.1696175582=${camping_person.rg_responsavel}&entry.1607304985=${camping_person.ddd}&entry.178624303=${camping_person.numero_telefone}&entry.2024722747=${camping_person.email}&entry.2037355570=${camping_person.zip}&entry.369969493=${camping_person.logradouro}&entry.1459898446=${camping_person.number}&entry.1878625591=${camping_person.bairro}&entry.524296923=${camping_person.localidade}&entry.1310221270=${camping_person.uf}&entry.705938882=${camping_person.igreja}&entry.767284581=${camping_person.outra_igreja}&entry.2032939010=${camping_person.alergias}&entry.1544227927=${camping_person.remedios}`;
+      var xhttp = new XMLHttpRequest();
+      xhttp.open("GET", url, false);
+      xhttp.send();
+    </script>
   </body>
 </html>
