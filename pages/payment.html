@@ -31,38 +31,7 @@
      
   </head>
   <body>
-  <script>
-    import { collection, getDocs } from "firebase/firestore"; 
-
-const querySnapshot = await getDocs(collection(db, "users"));
-querySnapshot.forEach((doc) => {
-console.log(`${doc.id} => ${doc.data()}`);
-});
-    </script>
-    <script type="module">
-      // Import the functions you need from the SDKs you need
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
-      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-analytics.js";
-      import { getFirestore} from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js";
-      // TODO: Add SDKs for Firebase products that you want to use
-      // https://firebase.google.com/docs/web/setup#available-libraries
-    
-      // Your web app's Firebase configuration
-      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-      const firebaseConfig = {
-        apiKey: "AIzaSyDgR2qh2QY9MjrbleadA6ULZ6-ybREPN1o",
-        authDomain: "acampdeeper.firebaseapp.com",
-        projectId: "acampdeeper",
-        storageBucket: "acampdeeper.appspot.com",
-        messagingSenderId: "561784788360",
-        appId: "1:561784788360:web:0f6574083d74875717d63d",
-        measurementId: "G-CVFDZJLFR9"
-      };
-    
-      // Initialize Firebase
-      const app = initializeApp(firebaseConfig);
-    </script>
-    <!-- Header -->
+  <!-- Header -->
   <div class="container">
     <div class="row">
       <div class="col-md-12 d-flex header w-50 mt-4">
@@ -109,71 +78,46 @@ console.log(`${doc.id} => ${doc.data()}`);
    
   <script src="../script/script-subscription.js"></script>
 
-<script>
-  var data_set = JSON.parse(localStorage.getItem('registered'));
+  <script>
+    alert('ATENÇÃO\nAo realizar o pagamento, utilize o mesmo e-mail do responsável pagante')
+    var data_set = JSON.parse(localStorage.getItem('registered'));
 
-  var camping_person = {
-      'nome': data_set[0],
-      'sobrenome': data_set[1],
-      'apelido': data_set[2],
-      'data_nascimento': data_set[3],
-      'nome_acompanhante': data_set[4],
-      'rg': data_set[5],
-      'cpf': data_set[6],
-      'nome_responsavel': data_set[7],
-      'rg_responsavel': data_set[8],
-      'ddd': data_set[9],
-      'numero_telefone': data_set[10],
-      'email': data_set[11],
-      'zip': data_set[12],
-      'logradouro': data_set[13],
-      'number': data_set[14],
-      'bairro': data_set[15],
-      'localidade': data_set[16],
-      'uf': data_set[17],
-      'igreja': data_set[18],
-      'outra_igreja': data_set[19],
-      'alergias': data_set[20],
-      'remedios': data_set[21]
-  }
+    var camping_person = {
+        'nome': data_set[0],
+        'sobrenome': data_set[1],
+        'apelido': data_set[2],
+        'data_nascimento': data_set[3],
+        'nome_acompanhante': data_set[4],
+        'rg': data_set[5],
+        'cpf': data_set[6],
+        'nome_responsavel': data_set[7],
+        'rg_responsavel': data_set[8],
+        'ddd': data_set[9],
+        'numero_telefone': data_set[10],
+        'email': data_set[11],
+        'zip': data_set[12],
+        'logradouro': data_set[13],
+        'number': data_set[14],
+        'bairro': data_set[15],
+        'localidade': data_set[16],
+        'uf': data_set[17],
+        'igreja': data_set[18],
+        'outra_igreja': data_set[19],
+        'alergias': data_set[20],
+        'remedios': data_set[21]
+    }
 
-  camping_person.apelido ? null :camping_person.apelido = camping_person.nome
-  
-  document.querySelector('.title').innerHTML = `${camping_person.apelido} dados registrados, para concluir sua inscrição efetue o pagamento!`
-</script>
+    camping_person.apelido ? null :camping_person.apelido = camping_person.nome
+    
+    document.querySelector('.title').innerHTML = `${camping_person.apelido}, dados registrados, para concluir sua inscrição efetue o pagamento!`
+  </script>
 
-<script>
-  
-  var docData = {
-    nome: data_set[0],
-    sobrenome: data_set[1],
-    apelido: data_set[2],
-    data_nascimento: data_set[3],
-    nome_acompanhante: data_set[4],
-    rg: data_set[5],
-    cpf: data_set[6],
-    nome_responsavel: data_set[7],
-    rg_responsavel: data_set[8],
-    ddd: data_set[9],
-    numero_telefone: data_set[10],
-    email: data_set[11],
-    zip: data_set[12],
-    logradouro: data_set[13],
-    number: data_set[14],
-    bairro: data_set[15],
-    localidade: data_set[16],
-    uf: data_set[17],
-    igreja: data_set[18],
-    outra_igreja: data_set[19],
-    alergias: data_set[20],
-    remedios: data_set[21]
-}
+  <script>
+    let url = `https://docs.google.com/forms/d/e/1FAIpQLSehSkWUaQvZkfOrVsVcTUPlxPNpBC7-fHJbjteUab7vdEpfgQ/formResponse?entry.48324874=${camping_person.nome}&entry.629868263=${camping_person.sobrenome}&entry.1034895676=${camping_person.apelido}&entry.1940460283=${camping_person.data_nascimento}&entry.1161803427=${camping_person.nome_acompanhante}&entry.2058262346=${camping_person.rg}&entry.1885451675=${camping_person.cpf}&entry.578135239=${camping_person.nome_responsavel}&entry.1696175582=${camping_person.rg_responsavel}&entry.1607304985=${camping_person.ddd}&entry.178624303=${camping_person.numero_telefone}&entry.2024722747=${camping_person.email}&entry.2037355570=${camping_person.zip}&entry.369969493=${camping_person.logradouro}&entry.1459898446=${camping_person.number}&entry.1878625591=${camping_person.bairro}&entry.524296923=${camping_person.localidade}&entry.1310221270=${camping_person.uf}&entry.705938882=${camping_person.igreja}&entry.767284581=${camping_person.outra_igreja}&entry.2032939010=${camping_person.alergias}&entry.1544227927=${camping_person.remedios}`
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", url, false);
+    xhttp.send();
+  </script>
 
-const db = firebase.firestore();
-
-db.collection("db-deeper").doc("clients").set(docData).then(() => {
-    console.log("Document successfully escrito!");
-});
-</script>
   </body>
 </html>
