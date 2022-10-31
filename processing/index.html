@@ -54,8 +54,11 @@
     camping_person.apelido ? null :camping_person.apelido = camping_person.nome
 
     document.querySelector('.tt').innerHTML = `😃 ${camping_person.apelido}, seu pagamento está sendo processado`
-
-    let obs = "processing"
+    
+    const urlParams = new URLSearchParams(window.location.search)
+    const myParam = urlParams.get('collection_id');
+    obs = `🟡 ${myParam}`
+    
 </script>
 <script src="../script/record.js"></script>
 </html>
