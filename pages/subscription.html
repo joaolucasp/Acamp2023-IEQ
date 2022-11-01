@@ -114,7 +114,7 @@
                 <input required='' name="nome" id="nome" class="form-control field field-section-1" inputmode="text"
                   minlength="2"
                   onkeypress="return (event.charCode == 32) || (event.charCode >= 65 && event.charCode <= 126) || (event.charCode >= 192 && event.charCode <= 251)"
-                  type="text" placeholder="Nome">
+                  type="text" placeholder="Nome" autocomplete="off">
                 <label for="nome">Nome</label>
               </div>
 
@@ -130,7 +130,7 @@
                 <input name="apelido" id="apelido" class="form-control field field-section-1"
                   inputmode="text" minlength="2"
                   onkeypress="return (event.charCode == 32) || (event.charCode >= 65 && event.charCode <= 126) || (event.charCode >= 192 && event.charCode <= 251)"
-                  type="text" placeholder="Apelido">
+                  type="text" placeholder="Apelido" autocomplete="off">
                 <label for="apelido">Apelido</label>
               </div>
 
@@ -155,7 +155,7 @@
               <div class="form-floating">
                 <input name="nome-acompanhante" id="nome-acompanhante" class="form-control field field-section-1 d-none"
                   inputmode="text" minlength="2" 
-                  type="text" placeholder="Qual o nome completo do seu irmão?">
+                  type="text" placeholder="Qual o nome completo do seu irmão?" autocomplete="off">
                 <label id="label-acompanhante" for="nome-acompanhante" class="d-none">Nome do irmão acompanhante</label>
               </div>
             </fieldset>
@@ -169,14 +169,14 @@
               <div class="form-floating">
                 <input required='' id="rg" class="form-control field field-section-2" inputmode="numeric" minlength="8"
                   maxlength="10" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-                  placeholder="RG (apenas números)">
+                  placeholder="RG (apenas números)" autocomplete="off">
                 <label for="rg">RG (apenas números)</label>
               </div>
 
               <div class="form-floating">
                 <input required='' id="cpf" class="form-control field field-section-2" inputmode="numeric"
                   minlength="11" maxlength="11" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-                  placeholder="CPF (apenas números)">
+                  placeholder="CPF (apenas números)" autocomplete="off">
                 <label for="cpf">CPF (apenas números)</label>
               </div>
 
@@ -184,14 +184,14 @@
                 <input name="nome-responsavel" id="nome-responsavel" class="form-control field field-section-2 d-none"
                   inputmode="text" minlength="2"
                   onkeypress="return (event.charCode == 32) || (event.charCode >= 65 && event.charCode <= 126) || (event.charCode >= 192 && event.charCode <= 251)"
-                  type="text" placeholder="Nome completo do responsável">
+                  type="text" placeholder="Nome completo do responsável" autocomplete="off">
                 <label id="label-nome-responsavel" for="nome-responsavel" class="d-none">Nome do responsável</label>
               </div>
 
               <div class="form-floating">
                 <input id="rg-responsavel" class="form-control field field-section-2 d-none" inputmode="numeric"
                   minlength="8" maxlength="10" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-                  placeholder="RG do responsável (apenas números)">
+                  placeholder="RG do responsável (apenas números)" autocomplete="off">
                 <label id="label-rg-responsavel" for="rg-responsavel" class="d-none">RG do responsável (apenas
                   números)</label>
               </div>
@@ -308,7 +308,7 @@
                     <input required='' name="numero-telefone" id="numero-telefone"
                       class="form-control field field-section-3" inputmode="numeric" maxlength="9" minlength="8"
                       onkeypress="return event.charCode >= 48 && event.charCode <= 57" type="tel"
-                      placeholder="Celular 34569-0123">
+                      placeholder="Celular 34569-0123" autocomplete="off">
                     <label for="numero-telefone">WhatsApp (Sem DDD) </label>
                   </div>
                 </div>
@@ -316,14 +316,14 @@
 
               <div class="form-floating">
                 <input required='' name="email" id="email" class="form-control field field-section-3" inputmode="email"
-                  type="email" placeholder="Email">
+                  type="email" placeholder="Email" autocomplete="off">
                 <label for="email">E-mail do responsével pagante</label>
               </div>
 
               <div class="form-floating">
                 <input required='' id="zip" class="form-control field field-section-3" inputmode="numeric" minlength="2"
                   maxlength="8" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-                  placeholder="CEP (apenas números)">
+                  placeholder="CEP (apenas números)" autocomplete="off">
                 <label for="zip">CEP (apenas números)</label>
               </div>
 
