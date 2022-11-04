@@ -28,7 +28,6 @@
   <script src="../components/cep/js/main.js"></script>
 
   <title>Inscrição Acampamento 2023</title>
-
 </head>
 
 <body>
@@ -109,14 +108,13 @@
           <!-- First Section Forms -->
           <div class="carousel-item active" onchange="removeInvalid(id)" id="section-1">
             <h3 class="mt-4 mb-4 title">Precisamos saber mais sobre você</h3>
-
             <fieldset class="w-75 fieldset">
 
               <div class="form-floating">
                 <input required='' name="nome" id="nome" class="form-control field field-section-1" inputmode="text"
                   minlength="2"
                   onkeypress="return (event.charCode == 32) || (event.charCode >= 65 && event.charCode <= 126) || (event.charCode >= 192 && event.charCode <= 251)"
-                  type="text" placeholder="Nome">
+                  type="text" placeholder="Nome" autocomplete="off">
                 <label for="nome">Nome</label>
               </div>
 
@@ -132,7 +130,7 @@
                 <input name="apelido" id="apelido" class="form-control field field-section-1"
                   inputmode="text" minlength="2"
                   onkeypress="return (event.charCode == 32) || (event.charCode >= 65 && event.charCode <= 126) || (event.charCode >= 192 && event.charCode <= 251)"
-                  type="text" placeholder="Apelido">
+                  type="text" placeholder="Apelido" autocomplete="off">
                 <label for="apelido">Apelido</label>
               </div>
 
@@ -157,7 +155,7 @@
               <div class="form-floating">
                 <input name="nome-acompanhante" id="nome-acompanhante" class="form-control field field-section-1 d-none"
                   inputmode="text" minlength="2" 
-                  type="text" placeholder="Qual o nome completo do seu irmão?">
+                  type="text" placeholder="Qual o nome completo do seu irmão?" autocomplete="off">
                 <label id="label-acompanhante" for="nome-acompanhante" class="d-none">Nome do irmão acompanhante</label>
               </div>
             </fieldset>
@@ -171,14 +169,14 @@
               <div class="form-floating">
                 <input required='' id="rg" class="form-control field field-section-2" inputmode="numeric" minlength="8"
                   maxlength="10" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-                  placeholder="RG (apenas números)">
+                  placeholder="RG (apenas números)" autocomplete="off">
                 <label for="rg">RG (apenas números)</label>
               </div>
 
               <div class="form-floating">
                 <input required='' id="cpf" class="form-control field field-section-2" inputmode="numeric"
                   minlength="11" maxlength="11" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-                  placeholder="CPF (apenas números)">
+                  placeholder="CPF (apenas números)" autocomplete="off">
                 <label for="cpf">CPF (apenas números)</label>
               </div>
 
@@ -186,14 +184,14 @@
                 <input name="nome-responsavel" id="nome-responsavel" class="form-control field field-section-2 d-none"
                   inputmode="text" minlength="2"
                   onkeypress="return (event.charCode == 32) || (event.charCode >= 65 && event.charCode <= 126) || (event.charCode >= 192 && event.charCode <= 251)"
-                  type="text" placeholder="Nome completo do responsável">
+                  type="text" placeholder="Nome completo do responsável" autocomplete="off">
                 <label id="label-nome-responsavel" for="nome-responsavel" class="d-none">Nome do responsável</label>
               </div>
 
               <div class="form-floating">
                 <input id="rg-responsavel" class="form-control field field-section-2 d-none" inputmode="numeric"
                   minlength="8" maxlength="10" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-                  placeholder="RG do responsável (apenas números)">
+                  placeholder="RG do responsável (apenas números)" autocomplete="off">
                 <label id="label-rg-responsavel" for="rg-responsavel" class="d-none">RG do responsável (apenas
                   números)</label>
               </div>
@@ -307,7 +305,7 @@
                 </div>
                 <div class="col-8">
                   <div class="form-floating">
-                    <input required='' name="numero-telefone" id="numero-telefone"
+                    <input required name="numero-telefone" id="numero-telefone" autocomplete="off"
                       class="form-control field field-section-3" inputmode="numeric" maxlength="9" minlength="8"
                       onkeypress="return event.charCode >= 48 && event.charCode <= 57" type="tel"
                       placeholder="Celular 34569-0123">
@@ -318,14 +316,14 @@
 
               <div class="form-floating">
                 <input required='' name="email" id="email" class="form-control field field-section-3" inputmode="email"
-                  type="email" placeholder="Email">
-                <label for="email">E-mail</label>
+                  type="email" placeholder="Email" autocomplete="off">
+                <label for="email">E-mail do responsével pagante</label>
               </div>
 
               <div class="form-floating">
-                <input required='' id="zip" class="form-control field field-section-3" inputmode="numeric" minlength="2"
+                <input required='' id="zip" class="form-control field field-section-3" inputmode="numeric" minlength="8"
                   maxlength="8" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-                  placeholder="CEP (apenas números)">
+                  placeholder="CEP (apenas números)" autocomplete="off">
                 <label for="zip">CEP (apenas números)</label>
               </div>
 
@@ -481,11 +479,12 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body text-start">
-                    <p class="fw-bold">Local</p>
+                    <p class="fw-bold">1 - Local</p>
                     <p>
                       1.1. Chácara Recanto das Graúnas I, II, III e IV, Alameda dos Tucanos - Balneário do 29, São
                       Carlos- SP, 13560-001
                     </p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3701.659485646878!2d-47.8032513851559!3d-21.90918450854141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b873f52c899015%3A0x66462a9e6885bddb!2sCh%C3%A1caras%20em%20S%C3%A3o%20Carlos%2FSP%20-%20Recanto%20das%20Gra%C3%BAnas%20I%2C%20II%2C%20III%20e%20IV!5e0!3m2!1spt-BR!2sbr!4v1667237123011!5m2!1spt-BR!2sbr" width="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     <p class="fw-bold">
                       2 - Data e horário
                     </p>

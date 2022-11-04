@@ -38,6 +38,11 @@ section {
     letter-spacing: 3px;
 }
 
+.bold {
+    font-weight:900 !important;
+    color: #fff;
+}
+
 .tt {
     color: #fff;
 }
