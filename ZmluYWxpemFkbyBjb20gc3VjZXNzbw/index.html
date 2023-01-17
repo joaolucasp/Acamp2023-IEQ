@@ -57,7 +57,7 @@
 
     camping_person.apelido ? null :camping_person.apelido = camping_person.nome
 
-    document.querySelector('.tt').innerHTML = `Parabéns ${camping_person.apelido}<br>Sua inscrição está confirmada! 😃`
+    document.querySelector('.tt').innerHTML = `Parabéns ${camping_person.apelido},<br>Sua inscrição está confirmada! 😃`
 
     const urlParams = new URLSearchParams(window.location.search)
     const myParam = urlParams.get('collection_id');
